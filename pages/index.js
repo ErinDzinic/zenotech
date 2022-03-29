@@ -1,27 +1,15 @@
-import { Flex,Text} from '@chakra-ui/react'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
+import '../styles/Home.module.css'
+import Layout from '../components/Layout'
+import Navbar from '../components/NavBar'
 import HomeTab from '../components/HomeTab'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
-    <>
-
-    <Flex>
-      <NavBar />
-    </Flex>
-
-    <Flex>
-      <HomeTab />
-    </Flex>
-
-    <Flex>
-      <Footer />
-    </Flex>
-
-    </>
+      <Layout>
+        <Navbar />
+        <HomeTab />
+        <Footer />
+      </Layout>
   )
 }

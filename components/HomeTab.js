@@ -1,21 +1,153 @@
-import React from "react";
-import { Img, Flex,Box, Text } from "@chakra-ui/react";
+import React, { useState } from 'react';
+import {
+  Box,
+  IconButton,
+  useBreakpointValue,
+  Stack,
+  Heading,
+  Text,
+  Container,Flex,
+  border,
+} from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
+import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
+// And react-slick as our Carousel Lib
+import Slider from 'react-slick';
+import { motion } from "framer-motion"
 
+const settings = {
+    dots: true,
+    arrows: false,
+    fade: true,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 4500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+export default function CaptionCarousel() {
+    // As we have used custom buttons, we need a reference variable to
+    // change the state
+    const [slider, setSlider] = useState(null);
+    // These are the breakpoints which changes the position of the
+    // buttons as the screen size changes
+    const top = useBreakpointValue({ base: '90%', md: '50%' });
+    const side = useBreakpointValue({ base: '30%', md: '40px' });
+  
+    // This list contains all the data for carousels
+    // This can be static or loaded from a server
+    const cards = [
+      {
+        title: 'Mostar',
+        text:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        image:
+          '../images/intera.jpg',
+      },
+      {
+        title: 'ZenoTech',
+        text:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..",
+        image:
+          '../images/mostar.jpg',
+      },
+      
+    ];
+  
+    return (
+      <Box
+        position={'relative'}
+        height={'600px'}
+        width={'full'}
+        overflow={'hidden'}
+        
+        >
 
-export default function HomeTab(){
-    return(
-<>
-    <Box w='100%'>
-        <Flex justifyContent='flex-start' backgroundColor='rgba(78,75,75)'>
-            <Img src="../images/mostar.jpg" w="60%" ></Img>
-            <Flex color='white' m='10%'>
-                <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum mi ut orci interdum facilisis. Aliquam at velit sed nisi suscipit blandit eget nec nisi. Nulla viverra consectetur finibus. Mauris mollis placerat erat quis consequat. Vestibulum posuere interdum nulla sed dictum. Duis at lectus justo. Aliquam venenatis nec sapien at mattis. Sed commodo est vel auctor convallis. Mauris pellentesque sem id odio mollis fermentum. Nullam vitae porta arcu. Sed blandit sollicitudin augue et suscipit.</Text>
-            </Flex>
-        </Flex>
-        <Flex justifyContent='flex-end' backgroundColor='rgba(78,75,75)' >
-            <Img src="../images/intera.jpg" w="60%"></Img>
-        </Flex>
-    </Box>
-</>
-    )
-}
+        {/* CSS files for react-slick */}
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+        {/* Left Icon */}
+        <IconButton
+          aria-label="left-arrow"
+          variant="unstyled"
+          _focus = {{border: 'none'}}
+          position="absolute"
+          left={side}
+          top={top}
+          transform={'translate(0%, -50%)'}
+          opacity='0.4'
+          _hover={{opacity:'1'}}
+          color='#fab717'
+          zIndex={2}
+          onClick={() => slider?.slickPrev()}>
+          <BiChevronLeft size="60px" />
+        </IconButton>
+        {/* Right Icon */}
+        <IconButton
+          aria-label="right-arrow"
+          _focus = {{border: 'none'}}
+          variant="unstyled"
+          position="absolute"
+          right={side}
+          top={top}
+          transform={'translate(0%, -50%)'}
+          opacity='0.4'
+          _hover={{opacity:'1'}}
+          color='#fab717'
+          zIndex={10}
+          onClick={() => slider?.slickNext()}>
+          <BiChevronRight size="60px" />
+        </IconButton>
+        {/* Slider */}
+        <Slider {...settings} ref={(slider) => setSlider(slider)}>
+          {cards.map((card, index) => (
+            <Box
+              key={index}
+              height={'2xl'}
+              position="relative"
+              backgroundPosition="center"
+              backgroundRepeat="no-repeat"
+              backgroundSize="cover"
+              backgroundImage={`url(${card.image})`}>
+              {/* This is the block you need to change, to customize the caption */}
+
+              
+              <Flex size="0" height="600px" position="sticky"  w='100%' p='60px'>
+              
+              <Flex backgroundColor='rgba(0, 0, 0, 0.45)' h='360px' w='37%' position='absolute' right='100' top='150' >
+              
+                <Stack
+                  spacing={6}
+                  w={'full'}
+                  maxW={'lg'}
+                  position="absolute"
+                  alignItems='flex-end'
+                  top="50%"
+                  transform="translate(0, -50%)">
+                  <Heading fontFamily='Rajdhani' fontWeight='extrabold' fontSize={{ base: '3xl', md: '4xl', lg: '7xl' }} color='#fab717'>
+                    {card.title}
+                  </Heading>
+                  <Text align='end' fontSize={{ base: 'md', lg: 'lg' }} color="White">
+                    {card.text}
+                  </Text>
+                </Stack>
+                
+              </Flex> 
+              </Flex>
+            
+            </Box>
+          ))}
+        </Slider>
+      </Box>
+    );
+  }
