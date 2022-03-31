@@ -1,21 +1,25 @@
 import React from "react";
 import { Link, Box, Flex, Text, Button, Stack, Spacer, Collapse, useDisclosure, background } from "@chakra-ui/react";
-import LogoOrng from "./Logos/LogoOrng";
+import LogoGray from "./Logos/LogoGray";
+import LogoOrng from "./Logos/LogoOrng"
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { useState, useEffect } from 'react'
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
+
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <NavBarContainer {...props} animate={{x:50}}>
-      <Spacer/><LogoOrng /><Spacer/>
-      <MenuToggle toggle={toggle} isOpen={isOpen}/>
-      <MenuLinks isOpen={isOpen}/>
-      <Spacer/>
-    </NavBarContainer>
+    <>
+    <LogoGray/>
+    <NavBarContainer {...props}>
+      <Spacer /> 
+      <MenuToggle toggle={toggle} isOpen={isOpen} />
+      <MenuLinks isOpen={isOpen} />
+      <Spacer />
+    </NavBarContainer></>
   );
 };
 
@@ -28,14 +32,13 @@ const MenuToggle = ({ toggle, isOpen}) => {
 };
 
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
+
   return (
-    <motion.div animate={{x:50}} transition={{ duration: 0.7}}>
     <Link href={to} _hover={{color: 'white'}}  _focus = {{border: 'none'}}>
       <Text display="block" {...rest}>
         {children}
       </Text>
     </Link>
-    </motion.div>
   );
 };
 
@@ -47,8 +50,6 @@ const MenuLinks = ({ isOpen }) => {
       flexBasis={{ base: "100%", md: "auto" }}
       fontSize='2xl'
       fontWeight='bold'
-      p="20px 15px 0px 100px"
-      m='0px 0px 15px 0px'
       top='0'
     >
       <Stack
@@ -57,17 +58,17 @@ const MenuLinks = ({ isOpen }) => {
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
       >
-          <MenuItem to="#">Home</MenuItem>
-          <MenuItem to="#career">Career</MenuItem>
-          <MenuItem to="#partners">Partners</MenuItem>
-          <MenuItem to="#about">About us </MenuItem>
+          <MenuItem  to="#">Home</MenuItem>
+          <MenuItem  to="#career">Career</MenuItem>
+          <MenuItem  to="#partners">Partners</MenuItem>
+          <MenuItem  to="#about">About us </MenuItem>
       </Stack>
     </Box>
   );
 };
 
 
-const NavBarContainer = ({ children, ...props }) => {
+const NavBarContainer = ({ children, isVisible, ...props }) => {
   const [colorChanges, setColorchange] = useState(false);
 
   useEffect(() => {
@@ -76,7 +77,7 @@ const NavBarContainer = ({ children, ...props }) => {
   })
 
   const changeNavbar = () => {
-    if(window.scrollY <= 10){
+    if(window.scrollY <= 180){
       setColorchange(true)
     }
     else{
@@ -84,21 +85,21 @@ const NavBarContainer = ({ children, ...props }) => {
     }
   }
 
+
   return (
     
-    <Box>
+    <Box >
     <Flex 
       as="nav"
       justify="space-between"
       justifyContent="center"
+      right='0'
       wrap="wrap"
-      w="100%"
-      h='12%'
+      w="50%"
       bg="#fab717"
-      p='10px'
+      p='15px'
       borderBottomRadius='10px'
-      opacity = { colorChanges ? '1.0':'0.5'}
-      //backgroundColor = { colorChanges ? '#fab717' : 'transparent'}
+      borderTopLeftRadius='10px'
       color={["black", "black", "primary.700", "primary.700"]}
       position="fixed"
       zIndex={1}

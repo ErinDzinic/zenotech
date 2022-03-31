@@ -48,7 +48,7 @@ export default function CaptionCarousel() {
       {
         title: 'ZenoTech',
         text:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..",
         image:
           '../images/mostar.jpg',
       },
@@ -61,7 +61,6 @@ export default function CaptionCarousel() {
         height={'600px'}
         width={'full'}
         overflow={'hidden'}
-        
         >
 
         {/* CSS files for react-slick */}
@@ -118,14 +117,11 @@ export default function CaptionCarousel() {
               backgroundPosition="center"
               backgroundRepeat="no-repeat"
               backgroundSize="cover"
-              backgroundImage={`url(${card.image})`}>
+              backgroundImage={`url(${card.image})`}
+              >
               {/* This is the block you need to change, to customize the caption */}
-
-              
               <Flex size="0" height="600px" position="sticky"  w='100%' p='60px'>
-              
-              <Flex backgroundColor='rgba(0, 0, 0, 0.45)' h='360px' w='37%' position='absolute' right='100' top='150' >
-              
+              <Flex backgroundColor='rgba(0, 0, 0, 0.45)' h='380px' w='35%' position='absolute' right='100' top='140' >
                 <Stack
                   spacing={6}
                   w={'full'}
@@ -133,6 +129,7 @@ export default function CaptionCarousel() {
                   position="absolute"
                   alignItems='flex-end'
                   top="50%"
+                  p='-5px'
                   transform="translate(0, -50%)">
                   <Heading fontFamily='Rajdhani' fontWeight='extrabold' fontSize={{ base: '3xl', md: '4xl', lg: '7xl' }} color='#fab717'>
                     {card.title}
