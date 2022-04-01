@@ -93,13 +93,13 @@ const NavBarContainer = ({ children, isVisible, ...props }) => {
       as="nav"
       justify="space-between"
       justifyContent="center"
-      right='0'
+      right='100'
       wrap="wrap"
-      w="50%"
+      w="%"
       bg="#fab717"
       p='15px'
-      borderBottomRadius='10px'
-      borderTopLeftRadius='10px'
+      borderBottomRadius='30px'
+      borderTopLeftRadius='0px'
       color={["black", "black", "primary.700", "primary.700"]}
       position="fixed"
       zIndex={1}

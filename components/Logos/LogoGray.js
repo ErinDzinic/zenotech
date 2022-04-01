@@ -5,10 +5,10 @@ import { motion } from "framer-motion"
 export default function Logo(props){
     return(
    
-    <Box {...props} background='transparent' position='fixed' zIndex={1}>
+    <Box {...props}>
         <motion.div animate={{x: 5}} transition={{ duration: 0.7}}>
             <Link href="#" _focus={{border: 'none'}}>
-                <Img w='160px' src="../images/ztgr.png" alt='logo'/>
+                <Img w='180px' src="../images/ztgr.png" alt='logo'/>
             </Link>
         </motion.div>
     </Box>

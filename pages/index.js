@@ -4,11 +4,12 @@ import Navbar from '../components/NavBar'
 import HomeTab from '../components/HomeTab'
 import Footer from '../components/Footer'
 import Partners from '../components/Partners'
+import RespNavbar2 from '../components/RespNavbar2'
 
 export default function Home() {
   return (
       <Layout>
-        <Navbar />
+        <RespNavbar2 />
         <HomeTab />
         <Partners />
         <Footer />
