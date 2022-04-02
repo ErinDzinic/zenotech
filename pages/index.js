@@ -5,6 +5,7 @@ import HomeTab from '../components/HomeTab'
 import Footer from '../components/Footer'
 import Partners from '../components/Partners'
 import RespNavbar2 from '../components/RespNavbar2'
+import { Collapse } from '@chakra-ui/react'
 
 export default function Home() {
   return (

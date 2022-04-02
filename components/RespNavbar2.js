@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Fade, ScaleFade, Slide, SlideFade } from '@chakra-ui/react'
 import {
   Box,
   Flex,
@@ -45,10 +46,12 @@ const Links = [{name: 'Home', href:'#'},
 // );
 
 export default function withAction() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose,  } = useDisclosure();
+  const { isOpenT, onToggle} = useDisclosure();
 
   return (
     <>
+    
     
       <Box px={6} position='fixed' zIndex={9999} top='0' right='0' borderBottomRadius='30px' bg={isOpen ? 'rgba(250,183,23,0.3)':'#fab717'}>
         <Flex h={16}  alignItems={'center'} justifyContent={'space-between'} paddingRight={isOpen ? '100px' : '100px'}>
@@ -58,10 +61,13 @@ export default function withAction() {
             icon={isOpen ? <motion.div animate={{rotate: '180deg'}}><CloseIcon h='18px' w='18px'/></motion.div> : <motion.div animate={{rotateX: '180deg'}}><HamburgerIcon h='18px' w='18px'/></motion.div>}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
+            onClick={() => {
+              isOpen ? onClose : onOpen;
+              onToggle;
+            } }
             _focus={{ border: 'none '}}
-            
           />
+       
           <HStack spacing={8} alignItems={'center'}  >
             <HStack
               as={'nav'}
@@ -85,9 +91,9 @@ export default function withAction() {
               ))}
             </HStack>
             <Box ><LogoOrng /></Box>
-          </HStack>
+          </HStack> 
         </Flex>
-
+        
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
@@ -107,7 +113,6 @@ export default function withAction() {
           </Box>
         ) : null}
       </Box>
-      
     </>
   );
 }
