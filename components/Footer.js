@@ -12,7 +12,6 @@ import {
 import { FaInstagram, FaFacebook, FaYoutube, FaLinkedin } from 'react-icons/fa';
 import Logo from './Logos/LogoWhite'
 import LogoOrng from './Logos/LogoOrng'
-import { useRef } from 'react'
 import { motion } from "framer-motion"
 
 const SocialButton2 = ({children,label,href}) => {
@@ -53,15 +52,13 @@ const SocialButton2 = ({children,label,href}) => {
 }
 
 export default function SmallCentered() {
-  const aboutRef = useRef()
+  
   return (
-    <Flex justifyContent='center' backgroundColor='#9a9ca2' >
+    <Flex justifyContent='center' backgroundColor='#9a9ca2'>
       
-    <Box 
+    <Box zIndex={1}
       bg={useColorModeValue('#9a9ca2', '#9a9ca2')}
       color={useColorModeValue('white', 'white')}
-      ref={aboutRef}
-      id = 'about'
       w='100%'
       >
       <Container
@@ -75,7 +72,7 @@ export default function SmallCentered() {
         <Logo />
         <Stack direction={'row'} spacing={8} >
           <Link href={'#'} _hover={{color: '#fab717'}} _focus={{border: 'none'}}>Home</Link>
-          <Link href={'#'} _hover={{color: '#fab717'}} _focus={{border: 'none'}}>Career</Link>
+          <Link href={'#career'} _hover={{color: '#fab717'}} _focus={{border: 'none'}}>Career</Link>
           <Link href={'#partners'} _hover={{color: '#fab717'}} _focus={{border: 'none'}}>Partners</Link>
           <Link href={'#about'} _hover={{color: '#fab717'}} _focus={{border: 'none'}}>About us</Link>
         </Stack>
@@ -85,7 +82,7 @@ export default function SmallCentered() {
         borderTopWidth={1}
         borderStyle={'solid'}
         borderColor='gray.200'
-        
+        borderRadius='50px'
         >
         <Container
           as={Stack}

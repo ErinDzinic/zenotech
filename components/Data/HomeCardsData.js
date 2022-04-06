@@ -1,4 +1,4 @@
-const cards = [
+export default cards = [
     {
       title: 'Mostar',
       text:

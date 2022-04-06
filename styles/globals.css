@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400&display=swap');
-
 html,
 body {
   padding: 0;
@@ -20,4 +19,11 @@ a {
   font-family: 'Rajdhani', sans-serif;
   text-decoration: none;
 }
+
+/* .home {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 67%);
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 67%);
+} */
+
+
 

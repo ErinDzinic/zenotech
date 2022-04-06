@@ -1,18 +1,21 @@
 import '../styles/Home.module.css'
 import Layout from '../components/Layout'
-import Navbar from '../components/NavBar'
 import HomeTab from '../components/HomeTab'
-import Footer from '../components/Footer'
+import Footer from '../components/footer/Footer'
 import Partners from '../components/Partners'
 import RespNavbar2 from '../components/RespNavbar2'
-import { Collapse } from '@chakra-ui/react'
+import Career from '../components/Career'
+import About from '../components/About'
+
 
 export default function Home() {
   return (
-      <Layout>
+      <Layout  >
         <RespNavbar2 />
         <HomeTab />
+        <Career />
         <Partners />
+        <About />
         <Footer />
       </Layout>
   )

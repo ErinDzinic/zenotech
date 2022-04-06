@@ -10,6 +10,7 @@ import {
   } from '@chakra-ui/react';
   import { motion, Variant } from 'framer-motion';
   import { useRef } from 'react';
+  import Stats from './Stats'
 
 
   const testimonials = [
@@ -69,7 +70,7 @@ import {
       
       <Flex
         boxShadow={'lg'}
-        maxW={'640px'}
+        maxW={'540px'}
         direction={{ base: 'column-reverse', md: 'row' }}
         width={'full'}
         rounded={'xl'}
@@ -103,7 +104,7 @@ import {
           left: 0,
           backgroundImage: backgrounds[index % 4],
         }}>
-        <Flex
+        <Flex 
           direction={'column'}
           textAlign={'left'}
           justifyContent={'space-between'}>
@@ -143,15 +144,17 @@ import {
       const partnersRef = useRef()
     return (
       <Flex
+        position={'relative'}
+        className='partners'
         ref={partnersRef}
         id = 'partners'
         textAlign={'center'}
-        pt={10}
+        pb='100px'
         justifyContent={'center'}
         direction={'column'}
         width={'full'}
         backgroundColor='#fab717'>
-        <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
+        <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'} mt='30px'>
           <chakra.h3
             fontFamily={'Rajdhani'}
             fontWeight={'bold'}
@@ -182,7 +185,7 @@ import {
           </chakra.h2>
         </Box>
         
-        <SimpleGrid
+        <SimpleGrid className='partners2'
           columns={{ base: 1, xl: 2 }}
           spacing={'20'}
           mt={16}

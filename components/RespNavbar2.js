@@ -1,27 +1,13 @@
-import { ReactNode } from 'react';
-import { Fade, ScaleFade, Slide, SlideFade } from '@chakra-ui/react'
 import {
   Box,
-  Flex,
-  Avatar,
+  Flex, 
   HStack,
   Link,
   IconButton,
-  Spacer,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  Collapse,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
-  useColorModeValue,
   Stack,
-  background,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
-import LogoGray from "./Logos/LogoGray"; 
 import LogoOrng from  "./Logos/LogoOrng"  
 import { motion } from "framer-motion"
 
@@ -31,40 +17,27 @@ const Links = [{name: 'Home', href:'#'},
                {name: 'About us', href:'#about'},
             ];
 
-// const NavLink = ({ children }) => (
-//   <Link
-//     px={2}
-//     py={1}
-//     color="black"
-//     _hover={{
-//       color: 'white',
-//     }}
-//     _focus={{border: 'none'}}
-//     href={'#'}>
-//     {children}
-//   </Link>
-// );
-
 export default function withAction() {
   const { isOpen, onOpen, onClose,  } = useDisclosure();
-  const { isOpenT, onToggle} = useDisclosure();
-
+  
   return (
     <>
     
     
-      <Box px={6} position='fixed' zIndex={9999} top='0' right='0' borderBottomRadius='30px' bg={isOpen ? 'rgba(250,183,23,0.3)':'#fab717'}>
-        <Flex h={16}  alignItems={'center'} justifyContent={'space-between'} paddingRight={isOpen ? '100px' : '100px'}>
+      <Box px={6} w='100%' position='fixed' zIndex={1} top='0' right='0' borderBottomRadius={isOpen ?'0px':'20px'} bg={isOpen ? 'rgba(250,183,23)':'#fab717'} h={isOpen?'100%':''}>
+      
+        <Flex h={'16'}  alignItems={'center'} justifyContent={'space-between'} >
+        <LogoOrng />
           <IconButton
             size={'lg'}
+            position='relative'
+            left='10'
+            top='2'
             variant='unstyled'
-            icon={isOpen ? <motion.div animate={{rotate: '180deg'}}><CloseIcon h='18px' w='18px'/></motion.div> : <motion.div animate={{rotateX: '180deg'}}><HamburgerIcon h='18px' w='18px'/></motion.div>}
+            icon={isOpen ? <motion.div animate={{rotate: '180deg'}}><CloseIcon /></motion.div> : <motion.div animate={{rotateX: '180deg'}}><HamburgerIcon w='35px'/></motion.div>}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
-            onClick={() => {
-              isOpen ? onClose : onOpen;
-              onToggle;
-            } }
+            onClick={ isOpen ? onClose : onOpen }
             _focus={{ border: 'none '}}
           />
        
@@ -75,6 +48,7 @@ export default function withAction() {
               fontWeight='bold'
               pt='15px'
               w='100%'
+              
               spacing={6}
               display={{ base: 'none', md: 'flex' }}
               >
@@ -90,22 +64,25 @@ export default function withAction() {
                 >{link.name}</Link>
               ))}
             </HStack>
-            <Box ><LogoOrng /></Box>
+            <Box ></Box>
           </HStack> 
         </Flex>
         
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
+          <Box w='100%' pb={4} display={{ md: 'none' }} align='center' position='relative' top='150'>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
                 <Link key={link.name} href={link.href}
+                
                 px={2}
                 py={1}
+                border='1px solid black'
                 color="black"
                 _hover={{
-                color: 'white',
+                  color: 'white'
                 }}
                 fontWeight='bold'
+                onClick={ isOpen ? onClose : onOpen } 
                 _focus={{border: 'none'}}
                >{link.name}</Link>
               ))}

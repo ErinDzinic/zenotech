@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Box, Flex, Text, Button, Stack, Spacer, Collapse, useDisclosure, background } from "@chakra-ui/react";
-import LogoGray from "./Logos/LogoGray";
-import LogoOrng from "./Logos/LogoOrng"
+import LogoGray from "../Logos/LogoGray";
+import LogoOrng from "../Logos/LogoOrng"
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from "framer-motion"

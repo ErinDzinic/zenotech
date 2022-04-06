@@ -4,10 +4,10 @@ import { motion } from "framer-motion"
 
 export default function Logo(props){
     return(
-    <Box {...props}>
-        <motion.div animate={{x: 5}} transition={{ duration: 0.7}}>
+    <Box {...props} paddingLeft='50px'>
+        <motion.div transition={{ duration: 0.7}}>
         <Link href="#" _focus={{border: 'none'}}>
-         <Img w='200px' src="../images/ztorg.png" alt='logo' />
+         <Img p='15px' w='200px' src="../images/ztorg.png" alt='logo' />
         </Link>
         </motion.div>
     </Box>
