@@ -8,7 +8,7 @@ import { StatNumber } from './StatNumber'
 export default function Stats(){
 
 return(
-  <Box as="section" bg={mode('gray.50', 'gray.800')} p="10">
+  <Box as="section" bg={mode('#2b2b2b', 'gray.800')} p="10">
     <Box
       maxW="7xl"
       mx="auto"

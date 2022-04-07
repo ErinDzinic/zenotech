@@ -18,6 +18,7 @@ import {
     IoMdTabletPortrait,
   } from 'react-icons/io';
   import Stats from './Stats/Stats'
+
   import { useRef } from 'react'
   import DiagonalDiv from './DiagonalDivs/DiagDivAbout';
   import Features from './Features/Features';
@@ -44,7 +45,7 @@ import {
     const aboutRef = useRef()
 
     return (
-        <><Features /><Box w='100%'
+        <><Box w='100%'
         backgroundColor='#2b2b2b'
         ref={aboutRef}
         id='about'>
