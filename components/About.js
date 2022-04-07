@@ -10,16 +10,17 @@ import {
     StackDivider,
     Icon,
     useColorModeValue,
+    Divider
   } from '@chakra-ui/react';
   import {
     IoIosDesktop,
     IoLogoJavascript,
     IoMdTabletPortrait,
   } from 'react-icons/io';
-  import Stat from './Stats'
-  import Stats from './Stats2'
+  import Stats from './Stats/Stats'
   import { useRef } from 'react'
   import DiagonalDiv from './DiagonalDivs/DiagDivAbout';
+  import Features from './Features/Features';
  
   
   const Feature = ({ text, icon, iconBg }) => {
@@ -43,86 +44,71 @@ import {
     const aboutRef = useRef()
 
     return (
-        
-        <Box w='100%' 
-        backgroundColor='#9a9ca2' 
-        borderBottom='1px' 
+        <><Features /><Box w='100%'
+        backgroundColor='#2b2b2b'
         ref={aboutRef}
-        id = 'about' >
-            <DiagonalDiv />
-         <Stats />
+        id='about'>
+        <DiagonalDiv />
+        <Stats />
 
-      <Container maxW={'5xl'} py={12} backgroundColor='#9a9ca2'>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-          <Stack spacing={8}>
-            <Heading fontFamily='Rajdhani'>Who are we?</Heading>
-            <Text color={'white'} fontSize={'lg'}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore
-            </Text>
-            <Stack
-            color={'white'}
-              spacing={4}
-              divider={
-                <StackDivider
-                  borderColor={useColorModeValue('#fab717', 'gray.700')}
-                />
-              }>
-              <Feature
-                icon={
-                  <Icon as={IoIosDesktop} color={'black'} w={4} h={4} />
-                }
-                iconBg={useColorModeValue('#fab717', 'yellow.900')}
-                text={'Lorem Ipsum'}
-                
-              />
-              <Feature
-                icon={<Icon as={IoLogoJavascript} color={'black'} w={5} h={5} />}
-                iconBg={useColorModeValue('#fab717', 'green.900')}
-                text={'Lorem Ipsum'}
-              />
-              <Feature
-                icon={
-                  <Icon as={IoMdTabletPortrait} color={'black'} w={5} h={5} />
-                }
-                iconBg={useColorModeValue('#fab717', 'purple.900')}
-                text={'Lorem Ipsum'}
-              />
+        <Container maxW={'5xl'} py={12} backgroundColor='#2b2b2b'>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+            <Stack spacing={8}>
+              <Heading fontFamily='Rajdhani'>Who are we?</Heading>
+              <Text color={'white'} fontSize={'lg'}>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy eirmod tempor invidunt ut labore
+              </Text>
+              <Stack
+                color={'white'}
+                spacing={4}
+                divider={<StackDivider
+                  borderColor={useColorModeValue('#fab717', 'gray.700')} />}>
+                <Feature
+                  icon={<Icon as={IoIosDesktop} color={'black'} w={4} h={4} />}
+                  iconBg={useColorModeValue('#fab717', 'yellow.900')}
+                  text={'Lorem Ipsum'} />
+                <Feature
+                  icon={<Icon as={IoLogoJavascript} color={'black'} w={5} h={5} />}
+                  iconBg={useColorModeValue('#fab717', 'green.900')}
+                  text={'Lorem Ipsum'} />
+                <Feature
+                  icon={<Icon as={IoMdTabletPortrait} color={'black'} w={5} h={5} />}
+                  iconBg={useColorModeValue('#fab717', 'purple.900')}
+                  text={'Lorem Ipsum'} />
+              </Stack>
             </Stack>
-          </Stack>
-          <Flex>
-            <Image 
-              rounded={'md'}
-              alt={'feature image'}
-              src={
-                '../images/randm.png'
-              }
-              objectFit={'cover'}
-            />
-          </Flex>
-          <Flex w='100%'>
-          <Stack spacing={6}>
-            <Heading fontFamily='Rajdhani' color={'#fab717'}>Who are we?</Heading>
-            <Text color={'white'} fontSize={'lg'}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore
-            </Text>
-        </Stack> </Flex>
-        </SimpleGrid>
-        
-      </Container>
-      </Box>
+            <Flex>
+              <Image
+                rounded={'md'}
+                alt={'feature image'}
+                src={'../images/randm.png'}
+                objectFit={'cover'} />
+            </Flex>
+            <Flex w='100%'>
+              <Stack spacing={6}>
+                <Heading fontFamily='Rajdhani' color={'#fab717'}>Who are we?</Heading>
+                <Text color={'white'} fontSize={'lg'}>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut labore
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut labore
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut labore
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut labore
+                </Text>
+              </Stack> </Flex>
+          </SimpleGrid>
+          
+        </Container>
+         <Box align='center'><Divider w={'80%'} opacity={0.3}/></Box>
+      </Box> </>
     );
   }

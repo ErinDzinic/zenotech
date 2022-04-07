@@ -41,7 +41,7 @@ export default function Career(){
     return(
 <>  
         <Flex
-           bg={useColorModeValue("#9a9ca2", "gray.600")}
+           bg={useColorModeValue("#2b2b2b", "gray.600")}
            p={50}
            w="full"
            alignItems="center"
@@ -55,30 +55,22 @@ export default function Career(){
                     py={4}
                     rounded="lg"
                     shadow="lg"
-                    bg={useColorModeValue("#fab717", "gray.800")}
+                    bg="white"
                     maxW="2xl"
                 >
                     <Box mt={2}>
-                        <Link
-                            fontSize="2xl"
-                            color={useColorModeValue("gray.700", "white")}
-                            fontWeight="700"
-                            _hover={{
-                                color: useColorModeValue("gray.600", "gray.200"),
-                                textDecor: "underline",
-                            }}
+                        <Text 
+                            fontSize="3xl"
+                            color="gray.700"
+                            fontWeight="800"
                         >
                            .NET Core 
-                        </Link>
-                        <chakra.p mt={2} color={useColorModeValue("gray.600", "gray.300")}>
+                        </Text>
+                        <chakra.p mt={2} color="gray.600">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
                             expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos
                             enim reprehenderit nisi, accusamus delectus nihil quis facere in
                             modi ratione libero!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
-                            expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos
-                            enim reprehenderit nisi, accusamus delectus nihil quis facere in
-                            modi ratione libero!
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
                             expedita dicta totam aspernatur doloremque. Excepturi iste iusto eos
                             enim reprehenderit nisi, accusamus delectus nihil quis facere in
                             modi ratione libero!
@@ -98,7 +90,7 @@ export default function Career(){
                          <Text>Apply</Text>
                         </IconButton>
     
-             <Modal  isOpen={isOpen} onClose={onClose} size='3xl'>
+             <Modal  isOpen={isOpen} onClose={onClose} size='lg'>
                 {overlay}
                 <ModalContent>
                     <ModalHeader >Modal Title</ModalHeader>

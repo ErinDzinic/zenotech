@@ -8,7 +8,7 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
-import LogoOrng from  "./Logos/LogoOrng"  
+import LogoGray from  "./Logos/LogoGray"  
 import { motion } from "framer-motion"
 
 const Links = [{name: 'Home', href:'#'},
@@ -24,10 +24,10 @@ export default function withAction() {
     <>
     
     
-      <Box px={6} w='100%' position='fixed' zIndex={1} top='0' right='0' borderBottomRadius={isOpen ?'0px':'20px'} bg={isOpen ? 'rgba(250,183,23)':'#fab717'} h={isOpen?'100%':''}>
+      <Box px={6} w='100%' position='fixed' zIndex={10} top='0' right='0'  bg='white' h={isOpen?'100%':''} boxShadow='md'>
       
         <Flex h={'16'}  alignItems={'center'} justifyContent={'space-between'} >
-        <LogoOrng />
+        <LogoGray />
           <IconButton
             size={'lg'}
             position='relative'
@@ -46,9 +46,8 @@ export default function withAction() {
               as={'nav'}
               fontSize='20px'
               fontWeight='bold'
-              pt='15px'
+              pt='18px'
               w='100%'
-              
               spacing={6}
               display={{ base: 'none', md: 'flex' }}
               >
@@ -58,7 +57,7 @@ export default function withAction() {
                  py={1}
                  color="black"
                  _hover={{
-                 color: 'white',
+                 color: '#fab717',
                  }}
                  _focus={{border: 'none'}}
                 >{link.name}</Link>
@@ -69,7 +68,7 @@ export default function withAction() {
         </Flex>
         
         {isOpen ? (
-          <Box w='100%' pb={4} display={{ md: 'none' }} align='center' position='relative' top='150'>
+          <Box w='100%' pb={6} display={{ md: 'none' }} align='center' position='relative' top='150'>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
                 <Link key={link.name} href={link.href}

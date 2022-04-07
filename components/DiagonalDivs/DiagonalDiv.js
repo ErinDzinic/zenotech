@@ -14,8 +14,8 @@ export default function DiagonalDiv(){
         justifyContent='center'
         alignItems='flex-end'
         borderBottom='10vw solid transparent'
-        borderLeft='98.9vw solid #9a9ca2'
-        backgroundColor='#fab717'
+        borderLeft='98.9vw solid #2b2b2b'
+        backgroundColor='white'
         backgroundClip='border-box'
         ></Box>
     )

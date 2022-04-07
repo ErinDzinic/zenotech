@@ -39,28 +39,12 @@ import {
 
 export default function contact() {
   return (
-    <Box bg={useColorModeValue("gray.50", "inherit")} p={8}>
-    <Box >
+    <><Box>
       <SimpleGrid
         display={{ base: "initial", md: "grid" }}
         columns={{ md: 3 }}
         spacing={{ md: 6 }}
       >
-        <GridItem colSpan={{ md: 1 }}>
-          <Box px={[4, 0]}>
-            <Heading fontSize="lg" fontWeight="md" lineHeight="6">
-              Profile
-            </Heading>
-            <Text
-              mt={1}
-              fontSize="sm"
-              color={useColorModeValue("gray.600", "gray.400")}
-            >
-              This information will be displayed publicly so be careful what
-              you share.
-            </Text>
-          </Box>
-        </GridItem>
         <GridItem mt={[5, null, 0]} colSpan={{ md: 2 }}>
           <chakra.form
             method="POST"
@@ -96,8 +80,7 @@ export default function contact() {
                       type="tel"
                       placeholder="www.example.com"
                       focusBorderColor="brand.400"
-                      rounded="md"
-                    />
+                      rounded="md" />
                   </InputGroup>
                 </FormControl>
               </SimpleGrid>
@@ -117,8 +100,7 @@ export default function contact() {
                     rows={3}
                     shadow="sm"
                     focusBorderColor="brand.400"
-                    fontSize={{ sm: "sm" }}
-                  />
+                    fontSize={{ sm: "sm" }} />
                   <FormHelperText>
                     Brief description for your profile. URLs are hyperlinked.
                   </FormHelperText>
@@ -137,16 +119,12 @@ export default function contact() {
                   <Avatar
                     boxSize={12}
                     bg={useColorModeValue("gray.100", "gray.800")}
-                    icon={
-                      <Icon
-                        as={FaUser}
-                        boxSize={9}
-                        mt={3}
-                        rounded="full"
-                        color={useColorModeValue("gray.300", "gray.700")}
-                      />
-                    }
-                  />
+                    icon={<Icon
+                      as={FaUser}
+                      boxSize={9}
+                      mt={3}
+                      rounded="full"
+                      color={useColorModeValue("gray.300", "gray.700")} />} />
                   <Button
                     type="button"
                     ml={5}
@@ -193,8 +171,7 @@ export default function contact() {
                         d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
                         strokeWidth="2"
                         strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
+                        strokeLinejoin="round" />
                     </Icon>
                     <Flex
                       fontSize="sm"
@@ -217,8 +194,7 @@ export default function contact() {
                           <input
                             id="file-upload"
                             name="file-upload"
-                            type="file"
-                          />
+                            type="file" />
                         </VisuallyHidden>
                       </chakra.label>
                       <Text pl={1}>or drag and drop</Text>
@@ -252,15 +228,13 @@ export default function contact() {
           </chakra.form>
         </GridItem>
       </SimpleGrid>
-    </Box>
-    <Box visibility={{ base: "hidden", sm: "visible" }} aria-hidden="true">
-      <Box py={5}>
-        <Box
-          borderTop="solid 1px"
-          borderTopColor={useColorModeValue("gray.200", "whiteAlpha.200")}
-        ></Box>
-      </Box>
-    </Box>    
-  </Box>
+    </Box><Box visibility={{ base: "hidden", sm: "visible" }} aria-hidden="true">
+        <Box py={5}>
+          <Box
+            borderTop="solid 1px"
+            borderTopColor={useColorModeValue("gray.200", "whiteAlpha.200")}
+          ></Box>
+        </Box>
+      </Box></>    
   );
 }

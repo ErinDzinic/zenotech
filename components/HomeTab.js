@@ -86,7 +86,7 @@ export default function CaptionCarousel() {
             opacity='0.4'
             _hover={{ opacity: '1' }}
             color='#fab717'
-            zIndex={2}
+            zIndex={1}
             onClick={() => slider?.slickPrev()}>
             <BiChevronLeft size="60px" />
           </IconButton>
@@ -102,7 +102,7 @@ export default function CaptionCarousel() {
             opacity='0.4'
             _hover={{ opacity: '1' }}
             color='#fab717'
-            zIndex={10}
+            zIndex={1}
             onClick={() => slider?.slickNext()}>
             <BiChevronRight size="60px" />
           </IconButton>

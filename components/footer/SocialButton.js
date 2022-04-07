@@ -8,7 +8,7 @@ export const SocialButton = chakra('a', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    bg: 'blackAlpha.400',
+    bg: '#2b2b2b',
     color: 'white',
     transition: 'all 0.5s',
     _hover: {

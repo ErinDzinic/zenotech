@@ -14,7 +14,7 @@ export default function TopDiagonalDiv(){
         clear= 'none'
         justifyContent='center'
         alignItems='flex-end'
-        borderBottom='10vw solid #9a9ca2'
+        borderBottom='10vw solid #2b2b2b'
         borderRight='100vw solid transparent'
         backgroundColor='transparent'
         backgroundClip='border-box'

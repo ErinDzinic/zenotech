@@ -8,6 +8,7 @@ import {
     Text,
     Wrap,
     WrapItem,
+    Spacer
   } from '@chakra-ui/react'
   import * as React from 'react'
   import { LanguageSwitcher } from './LanguageSwitch'
@@ -15,9 +16,10 @@ import {
   import { footerLinks, links, socialLinks } from './_dataFooter'
   import LogoFooter from  "./LogoFooter" 
   
+  
   export default function Footer() {
       return(
-    <Box as="footer" bg="black" color="white" py="64px">
+    <Box as="footer" bg="#2b2b2b" color="white" py="64px">
       <Box maxW="7xl" px="8" mx="auto">
         <Flex
           direction={{
@@ -37,7 +39,7 @@ import {
             }}
           >
           <LogoFooter />
-            <HStack spacing="4" mt="8" as="ul">
+            <HStack spacing="10" mt="8" as="ul" justifyContent={'center'}>
               {socialLinks.map((link, idx) => (
                 <SocialButton key={idx} href={link.href}>
                   <Box srOnly>{link.label}</Box>
@@ -74,8 +76,10 @@ import {
                         as="a"
                         href={link.href}
                         _hover={{
-                          textDecor: 'underline',
+                          color: '#fab717',
+                          textDecor: 'none',
                         }}
+                        target='_blank'
                       >
                         {link.label}
                         {link.badge && (
@@ -91,7 +95,7 @@ import {
             ))}
           </SimpleGrid>
         </Flex>
-        <Divider my="10" borderColor="blue.300" />
+        
         <Flex
           direction={{
             base: 'column-reverse',
@@ -115,10 +119,7 @@ import {
               lg: '0',
             }}
           >
-            <WrapItem >
-              <Box> <Text>&copy; Copyright. All rights reserved ZenoTech </Text></Box>
-            </WrapItem>
-          </Wrap>
+          </Wrap> <Text> Copyright &copy;  ZenoTech d.o.o.  All Rights Reserved -  2022 </Text>
         </Flex>
       </Box>
     </Box>

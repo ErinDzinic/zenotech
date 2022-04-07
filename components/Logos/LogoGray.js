@@ -6,11 +6,9 @@ export default function Logo(props){
     return(
    
     <Box {...props}>
-        <motion.div animate={{x: 5}} transition={{ duration: 0.7}}>
             <Link href="#" _focus={{border: 'none'}}>
-                <Img w='180px' src="../images/ztgr.png" alt='logo'/>
-            </Link>
-        </motion.div>
+                <Img p='15px' pt='10px' w='200px' src="../images/ztgr.png" alt='logo'/>
+            </Link> 
     </Box>
     )
 }

@@ -1,14 +1,14 @@
 import { Badge, LightMode } from '@chakra-ui/react'
 import * as React from 'react'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 export const links = [
   {
     title: 'Company',
     links: [
       {
-        label: 'Why Envelope',
-        href: '#',
+        label: 'Why ZenoTech',
+        href: '#about',
       },
       {
         label: 'Our story',
@@ -16,10 +16,10 @@ export const links = [
       },
       {
         label: 'Careers',
-        href: '#',
+        href: '#career',
         badge: (
           <LightMode>
-            <Badge colorScheme="blue" fontSize="0.625rem">
+            <Badge color="black" fontSize="0.625rem">
               Hiring
             </Badge>
           </LightMode>
@@ -89,16 +89,14 @@ export const links = [
     title: 'Contact',
     links: [
       {
-        label: 'Login',
-        href: '#',
+        label: '+387603005860'
       },
       {
-        label: 'Chat with us',
-        href: '#',
+        label: 'info@zenotech.se'
       },
       {
-        label: 'Email us',
-        href: '#',
+        label: 'Bišće polje bb, Mostar 88000',
+        href: 'https://goo.gl/maps/CkX63GbAR86bSUEU6',
       },
     ],
   },
@@ -106,18 +104,18 @@ export const links = [
 export const socialLinks = [
   {
     label: 'Facebook',
-    icon: <FaFacebook />,
+    icon: <FaFacebookSquare size='35px'/>,
     href: '#',
   },
   {
     label: 'Instagram',
-    icon: <FaInstagram />,
+    icon: <FaInstagram size='35px'/>,
     href: '#',
   },
   {
     label: 'LinkedIn',
-    icon: <FaLinkedin />,
-    href: '#',
+    icon: <FaLinkedin size='35px'/>,
+    href: 'https://www.linkedin.com/company/zenotech-d-o-o/about/',
   },
   
 ]
