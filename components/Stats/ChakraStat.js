@@ -1,16 +1,21 @@
-import { Stat as ChakraStat, useColorModeValue } from '@chakra-ui/react'
+import { Box, Stack, useColorModeValue } from '@chakra-ui/react'
 import * as React from 'react'
 
-export const Stat = (props) => (
-  <ChakraStat
-    px={{
-      base: 4,
-      sm: 6,
-    }}
-    py="5"
-    bg={useColorModeValue('white', 'gray.700')}
-    shadow="base"
-    rounded="lg"
-    {...props}
-  />
-)
+export const Stat = (props) => {
+  const { title, value, ...rest } = props
+  return (
+    <Stack direction="column-reverse" maxW="12rem" mx="auto" as="dl" textAlign="center" {...rest}>
+      <Box as="dt" color={useColorModeValue('white', 'whiteAlpha.700')} fontWeight="medium">
+        {title}
+      </Box>
+      <Box
+        as="dd"
+        fontSize="6xl"
+        fontWeight="extrabold"
+        color={useColorModeValue('#fab717', 'blue.300')}
+      >
+        {value}
+      </Box>
+    </Stack>
+  )
+}

@@ -1,36 +1,51 @@
-import { Box, SimpleGrid, useColorModeValue as mode } from '@chakra-ui/react'
+import { Box, Heading, Stack, StackDivider, Text, useColorModeValue } from '@chakra-ui/react'
 import * as React from 'react'
-import data from './data.json'
 import { Stat } from './ChakraStat'
-import { StatLabel } from './StatLabel'
-import { StatNumber } from './StatNumber'
+import Fade from 'react-reveal/Fade';
 
 export default function Stats(){
 
 return(
-  <Box as="section" bg={mode('#2b2b2b', 'gray.800')} p="10">
-    <Box
-      maxW="7xl"
-      mx="auto"
-      px={{
-        base: '6',
-        md: '8',
-      }}
-    >
-      <SimpleGrid
-        columns={{
-          base: 1,
-          md: 3,
-        }}
-        spacing="6"
+  <Box
+    as="section"
+    maxW="7xl"
+    mx="auto"
+    px={{
+      base: '6',
+      md: '8',
+    }}
+    py={{
+      base: '12',
+      md: '20',
+    }}
+  >
+    <Fade right>
+    <Box mb="12" textAlign="center">
+      <Heading color='#fab717' size="xl" fontWeight="extrabold" lineHeight="normal">
+        ZenoTech through matemathics
+      </Heading>
+      <Text
+        fontSize="lg"
+        mt="4"
+        fontWeight="medium"
+        color={useColorModeValue('white', 'whiteAlpha.700')}
       >
-        {data.map(({ label, value }) => (
-          <Stat key={label}>
-            <StatLabel>{label}</StatLabel>
-            <StatNumber>{value}</StatNumber>
-          </Stat>
-        ))}
-      </SimpleGrid>
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+        consequat duis enim.
+      </Text>
     </Box>
+    <Stack
+      spacing="8"
+      direction={{
+        base: 'column',
+        md: 'row',
+      }}
+      divider={<StackDivider />}
+    >
+      <Stat title="Amet minim mollit non deserunt ullamco." value="85%" />
+      <Stat title="Amet minim mollit non deserunt ullamco." value="3/4" />
+      <Stat title="Amet minim mollit non deserunt ullamco." value="45K" />
+    </Stack>
+    </Fade>
   </Box>
 )}

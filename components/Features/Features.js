@@ -13,15 +13,19 @@ import {
   import * as React from 'react'
   import { FaArrowRight, FaFileSignature, FaHandsHelping, FaHeadset } from 'react-icons/fa'
   import { Feature } from './FeaturesDesign'
+  import Fade from 'react-reveal/Fade';
   
   export default function Features(){
     return (
       
-          <Box bgColor={'white'}>
-          <Divider my="20" opacity={1} />
+       
+          <Box bgColor={'white'} align='center'>
+          <Divider w='80%' my="20" opacity={1} />
+          <Fade top>
           <Box align='center' pb='80px'> 
               <Heading size={'4xl'} fontFamily='Rajdhani'>What do we offer</Heading> 
             </Box>
+            </Fade>
           <SimpleGrid
             columns={{
                 base: 1,
@@ -32,6 +36,7 @@ import {
                 md: '2',
             }}
         >
+            <Fade bottom>
             <Feature title="Share files" icon={<FaFileSignature />}>
                 Keep files and the messages about them together in channels.
             </Feature>
@@ -50,6 +55,8 @@ import {
             <Feature title="Collaborate with partners" icon={<FaHandsHelping />}>
                 Keep files and the messages about them together in channels.
             </Feature>
+            </Fade>
+            <Divider my="10" opacity={0} />
         </SimpleGrid>
         </Box>
     )

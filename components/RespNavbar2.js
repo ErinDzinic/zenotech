@@ -6,10 +6,13 @@ import {
   IconButton,
   useDisclosure,
   Stack,
+  
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import LogoGray from  "./Logos/LogoGray"  
 import { motion } from "framer-motion"
+import { useEffect,useState } from 'react';
+
 
 const Links = [{name: 'Home', href:'#'},
                {name: 'Career', href :'#career'},
@@ -22,12 +25,10 @@ export default function withAction() {
   
   return (
     <>
-    
-    
-      <Box px={6} w='100%' position='fixed' zIndex={10} top='0' right='0'  bg='white' h={isOpen?'100%':''} boxShadow='md'>
+      <Box px={6} w='100%' position='fixed' zIndex={10} top='0' right='0'  bg='white' h={isOpen?'100%':''} boxShadow='md' >
       
-        <Flex h={'16'}  alignItems={'center'} justifyContent={'space-between'} >
-        <LogoGray />
+        <Flex h={'16'} alignItems={'center'} justifyContent={'space-between'} >
+        <LogoGray pl='55px'/>
           <IconButton
             size={'lg'}
             position='relative'
@@ -69,16 +70,17 @@ export default function withAction() {
         
         {isOpen ? (
           <Box w='100%' pb={6} display={{ md: 'none' }} align='center' position='relative' top='150'>
-            <Stack as={'nav'} spacing={4}>
+            <Stack as={'nav'} spacing={4} >
               {Links.map((link) => (
                 <Link key={link.name} href={link.href}
-                
+                borderRadius='10px'
                 px={2}
                 py={1}
-                border='1px solid black'
-                color="black"
+                border='2px solid #fab717'
+                color="#2b2b2b"
+                
                 _hover={{
-                  color: 'white'
+                  textDecoration: 'none'
                 }}
                 fontWeight='bold'
                 onClick={ isOpen ? onClose : onOpen } 

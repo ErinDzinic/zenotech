@@ -3,10 +3,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Rajdhani', sans-serif;
   text-decoration: none;
   scroll-behavior: smooth;
-  
+  font-family: 'Rajdhani';
 }
 
 a {
@@ -16,14 +15,12 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: 'Rajdhani', sans-serif;
   text-decoration: none;
+  font-family: 'Rajdhani';
 }
 
-/* .home {
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 67%);
-  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 67%);
-} */
+
+  
 
 
 

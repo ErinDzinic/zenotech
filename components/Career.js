@@ -23,7 +23,7 @@ import {
   import DiagonalDiv from "./DiagonalDivs/DiagonalDiv";
   import CareerForm from './CareerForm'
   import { useRef } from 'react'
-
+  import Fade from 'react-reveal/Fade';
 export default function Career(){
 
     const OverlayOne = () => (
@@ -39,16 +39,17 @@ export default function Career(){
       const [overlay, setOverlay] = React.useState(<OverlayOne />)
 
     return(
-<>  
+<>      
+        
         <Flex
+           ref={careerRef}
+           id = 'career'
            bg={useColorModeValue("#2b2b2b", "gray.600")}
            p={50}
            w="full"
            alignItems="center"
-           justifyContent="center"
-           ref={careerRef}
-           id = 'career'
-        >
+           justifyContent="center">
+               <Fade>
                     <Box
                     mx="auto"
                     px={8}
@@ -56,8 +57,7 @@ export default function Career(){
                     rounded="lg"
                     shadow="lg"
                     bg="white"
-                    maxW="2xl"
-                >
+                    maxW="2xl">
                     <Box mt={2}>
                         <Text 
                             fontSize="3xl"
@@ -76,7 +76,7 @@ export default function Career(){
                             modi ratione libero!
                         </chakra.p>
                     </Box>
-    
+        
                     <Flex justifyContent="center" alignItems="center" mt={4}>
                         <IconButton
                             w='50%'
@@ -90,6 +90,7 @@ export default function Career(){
                          <Text>Apply</Text>
                         </IconButton>
     
+                               
              <Modal  isOpen={isOpen} onClose={onClose} size='lg'>
                 {overlay}
                 <ModalContent>
@@ -103,11 +104,10 @@ export default function Career(){
                     </ModalFooter>
                 </ModalContent>
             </Modal>
-    
+           
             </Flex>
-                </Box>
+                </Box> </Fade> 
                 </Flex>
-        
         
         <DiagonalDiv />
         

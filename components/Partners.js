@@ -2,7 +2,7 @@ import { Box, Flex, Img, SimpleGrid, Text, useColorModeValue as mode } from '@ch
 import * as React from 'react'
 import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
 import LogoGray from  "./Logos/LogoGray" 
-
+import Fade from 'react-reveal/Fade';
 
 const Testimonial = (props) => {
   const { logo, children, image, author, role, colorScheme: c } = props
@@ -117,6 +117,7 @@ const Testimonial = (props) => {
 export default function Partners(){
   return (
     <Box as="section" bg={mode('white', 'gray.800')} py="12">
+      <Fade top><Text align={'center'} fontSize='7xl' mb='50px' fontWeight={'bold'}>Our Partners</Text></Fade>
       <Box
         maxW={{
           base: 'xl',
@@ -134,6 +135,7 @@ export default function Partners(){
           }}
           spacing="20"
         >
+          <Fade left>
           <Testimonial
             logo={<LogoGray />}
             author="Kunle Adigun"
@@ -143,7 +145,8 @@ export default function Partners(){
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          </Testimonial>
+          </Testimonial></Fade>
+          <Fade right>
           <Testimonial
             logo={<LogoGray />}
             author="Johanna Kate"
@@ -153,28 +156,8 @@ export default function Partners(){
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          </Testimonial>
-
-          <Testimonial
-            logo={<LogoGray />}
-            author="Johanna Kate"
-            role="Marketing Manager, Chat Monkey"
-            colorScheme="yellow"
-            image="https://images.unsplash.com/photo-1486116736668-6384736c9330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTA3fHxsYWR5JTIwaGVhZHNob3R8ZW58MHx8MHw%3D&auto=format&fit=crop&w=800&q=60"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          </Testimonial>
-          <Testimonial
-            logo={<LogoGray />}
-            author="Johanna Kate"
-            role="Marketing Manager, Chat Monkey"
-            colorScheme="yellow"
-            image="https://images.unsplash.com/photo-1486116736668-6384736c9330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTA3fHxsYWR5JTIwaGVhZHNob3R8ZW58MHx8MHw%3D&auto=format&fit=crop&w=800&q=60"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          </Testimonial>
+          </Testimonial></Fade>
+          
         </SimpleGrid>
       </Box>
     </Box>

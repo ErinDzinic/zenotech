@@ -7,20 +7,18 @@ import {
     Stack,
     Text,
     Wrap,
-    WrapItem,
-    Spacer
   } from '@chakra-ui/react'
   import * as React from 'react'
-  import { LanguageSwitcher } from './LanguageSwitch'
   import { SocialButton } from './SocialButton'
   import { footerLinks, links, socialLinks } from './_dataFooter'
   import LogoFooter from  "./LogoFooter" 
+  import { motion } from "framer-motion"
   
   
   export default function Footer() {
       return(
     <Box as="footer" bg="#2b2b2b" color="white" py="64px">
-      <Box maxW="7xl" px="8" mx="auto">
+      <Box  maxW="7xl" px="8" mx="auto">
         <Flex
           direction={{
             base: 'column',
@@ -39,12 +37,18 @@ import {
             }}
           >
           <LogoFooter />
-            <HStack spacing="10" mt="8" as="ul" justifyContent={'center'}>
+          
+            <HStack spacing="5" mt="8" ml='-20' as="ul" justifyContent={'center'}>
               {socialLinks.map((link, idx) => (
-                <SocialButton key={idx} href={link.href}>
+               <motion.div whileHover={{
+                 rotate: '30deg'
+               }}
+               whileTap={{
+                rotate: '30deg'
+               }}><SocialButton key={idx} href={link.href}>
                   <Box srOnly>{link.label}</Box>
                   {link.icon}
-                </SocialButton>
+                </SocialButton></motion.div> 
               ))}
             </HStack>
           </Box>
