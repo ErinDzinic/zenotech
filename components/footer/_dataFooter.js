@@ -2,6 +2,11 @@ import { Badge, LightMode } from '@chakra-ui/react'
 import * as React from 'react'
 import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
+// ==============================================================================================
+// HERE YOU CAN CHANGE EVERYTHING ABOUT FOOTER , FROM LINKS TO HREFS TO EVERYTHING THAT SUITS YOU 
+// ==============================================================================================
+
+
 export const links = [
   {
     title: 'Company',

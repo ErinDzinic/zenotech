@@ -14,7 +14,7 @@ import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
 import TopDiagonalDiv from "./DiagonalDivs/TopDiagonalDiv"
-import Zoom from 'react-reveal/Zoom';
+import useMediaQuery  from './hooks/useMediaQuery';
 
 const settings = {
     dots: true,
@@ -35,6 +35,7 @@ export default function CaptionCarousel() {
     // buttons as the screen size changes
     const top = useBreakpointValue({ base: '90%', md: '50%' });
     const side = useBreakpointValue({ base: '30%', md: '40px' });
+    const isDesktop = useMediaQuery('(min-width: 960px)');
 
     
   
@@ -122,7 +123,7 @@ export default function CaptionCarousel() {
               >
                 {/* This is the block you need to change, to customize the caption */}
                 <Flex size="0" height="600px" position="sticky" w='100%' p='60px'>
-                  <Flex backgroundColor='rgba(0, 0, 0, 0.45)' h='380px' w='35%' position='absolute' right='100' top='140'>
+                  <Flex backgroundColor='rgba(0, 0, 0, 0.45)' h='380px' w={isDesktop ? '35%' : '100%'} position='absolute' right={isDesktop? '100' : '0'} top='140'>
                     <Stack
                       spacing={6}
                       w={'full'}
@@ -132,13 +133,12 @@ export default function CaptionCarousel() {
                       top="50%"
                       p='-5px'
                       transform="translate(0, -50%)">
-                     <Zoom> <Heading fontFamily='Rajdhani' fontWeight='extrabold' fontSize={{ base: '3xl', md: '4xl', lg: '7xl' }} color='#fab717'>
+                      <Heading fontFamily='Rajdhani' fontWeight='extrabold' fontSize={{ base: '3xl', md: '4xl', lg: '7xl' }} color='#fab717'>
                         {card.title}
                       </Heading>
                       <Text align='end' fontSize={{ base: 'md', lg: 'lg' }} color="White">
                         {card.text}
                       </Text>
-                      </Zoom>
                     </Stack>
                   
                   </Flex> 

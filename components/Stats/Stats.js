@@ -21,7 +21,7 @@ return(
   >
     <Fade right>
     <Box mb="12" textAlign="center">
-      <Heading color='#fab717' size="xl" fontWeight="extrabold" lineHeight="normal">
+      <Heading fontFamily={'Rajdhani'} color='#fab717' size="xl" fontWeight="extrabold" lineHeight="normal">
         ZenoTech through matemathics
       </Heading>
       <Text

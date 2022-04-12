@@ -11,7 +11,6 @@ import {
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import LogoGray from  "./Logos/LogoGray"  
 import { motion } from "framer-motion"
-import { useEffect,useState } from 'react';
 
 
 const Links = [{name: 'Home', href:'#'},

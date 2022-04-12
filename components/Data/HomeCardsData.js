@@ -1,3 +1,6 @@
+// TRIED TO USE THIS BUT DIDNT GET IT SO THIS FILE IS NOT IN USE
+
+
 export default cards = [
     {
       title: 'Mostar',

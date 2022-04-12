@@ -45,7 +45,8 @@ import {
                }}
                whileTap={{
                 rotate: '30deg'
-               }}><SocialButton key={idx} href={link.href}>
+               }}>
+                 <SocialButton key={idx} href={link.href}>
                   <Box srOnly>{link.label}</Box>
                   {link.icon}
                 </SocialButton></motion.div> 

@@ -2,11 +2,11 @@ import {
     Box,
     Divider
   } from '@chakra-ui/react';
-  import AboutText from './AboutText';
-  import Stats from './Stats/Stats'
-  import Features from './Features/Features'
+  import AboutText from '../About/AboutText'
+  import Stats from '../Stats/Stats'
+  import Features from '../Features/Features'
   import { useRef } from 'react'
-  import DiagonalDiv from './DiagonalDivs/DiagDivAbout';
+  import DiagonalDiv from '../DiagonalDivs/DiagDivAbout';
   
 
   export default function SplitWithImage() {

@@ -1,24 +1,21 @@
 import {
     Box,
-    Button,
-    Center,
     Divider,
     Heading,
-    Img,
     SimpleGrid,
-    Stack,
-    Text,
     useColorModeValue as mode,
   } from '@chakra-ui/react'
   import * as React from 'react'
-  import { FaArrowRight, FaFileSignature, FaHandsHelping, FaHeadset } from 'react-icons/fa'
+  import { FaFileSignature, FaHandsHelping, FaHeadset } from 'react-icons/fa'
   import { Feature } from './FeaturesDesign'
   import Fade from 'react-reveal/Fade';
+
+
+//   ========== THIS IS COMPONENT FOR 2x3 column of ICONS BELOW OUR PARTNERS ================
   
   export default function Features(){
     return (
       
-       
           <Box bgColor={'white'} align='center'>
           <Divider w='80%' my="20" opacity={1} />
           <Fade top>
@@ -36,6 +33,12 @@ import {
                 md: '2',
             }}
         >
+
+            {/* =============================================================
+            KEEP EVERYTHING INSIDE OF FADE COMPONENT. ADD MORE JUST COPY PAStE , 
+            FOR YOUR OWN PURPOSES CHANGE THE ICONS WHICEVER YOU FIT THE MOST 
+            =================================================================*/}
+
             <Fade bottom>
             <Feature title="Share files" icon={<FaFileSignature />}>
                 Keep files and the messages about them together in channels.
