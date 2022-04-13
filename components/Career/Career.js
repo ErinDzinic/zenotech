@@ -54,32 +54,27 @@ export default function Career(){
      alignItems="center"
      justifyContent="center" >
         <Fade>
-         
-                <Box borderRadius={'20px'} w={isDesktop ? '750px' : '355px'} bg={'white'} h='600px' >
-                   
+                <Box borderRadius={'20px'} w={isDesktop ? '750px' : '355px'} bg={'white'} h='700px' >
                   <Heading fontFamily={'Rajdhani'} textAlign='center' pb='23px' pt='15px'>Current Job Openings</Heading>
-                    <Scrollbars autoHide style={{ height: 500 }} ><CareerCard /> </Scrollbars>
-                    <Flex  justifyContent="center" alignItems="center" mt={10} mb={40} >
-                        <IconButton
-                            w='50%'
-                            color={useColorModeValue("black", "brand.400")}
-                            _hover={{ color: '#fab717',border: '2px solid #fab717' }}
-                            onClick={() => {
-                                setOverlay(<OverlayOne />)
-                                onOpen()
-                                
-                              }}
-                            >
-                         <Text>Apply</Text>
-                        </IconButton>
-                     </Flex>
+                    <Scrollbars autoHide style={{ height: 450 }} ><CareerCard /> </Scrollbars>
+                    <Flex justifyContent="center" alignItems="center" mt='40px' ml='7px'>
+                    <Text fontSize={'25px'} color={'black'}>
+                    Apply for desired job, 
+                    please send us your CV to our e-mail address: 
+                    </Text>
+                    
+                    </Flex>
+                    <Flex justify={'center'}>
+                    <Text textAlign={'center'} mt='10px' fontSize={'25px'} color={'#fab717'} >
+                      info</Text><Text textAlign={'center'} mt='10px' fontSize={'25px'} color={'#2b2b2b'}>@</Text><Text textAlign={'center'} mt='10px' fontSize={'25px'} color={'#fab717'}>zenotech.se</Text>
+                      </Flex>
                  </Box>
          </Fade> 
 </Flex>
         
 <DiagonalDiv />
 
-<Modal  isOpen={isOpen} onClose={onClose} size='lg'>
+{/* <Modal  isOpen={isOpen} onClose={onClose} size='lg'>
                 {overlay}
                 <ModalContent>
                     <ModalHeader color={'#2b2b2b'}>Apply for job</ModalHeader>
@@ -91,7 +86,7 @@ export default function Career(){
                      <Button onClick={onClose}>Close</Button>
                     </ModalFooter>
                 </ModalContent>
-                            </Modal>
+                            </Modal> */}
         
 </>
         

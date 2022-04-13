@@ -49,7 +49,7 @@ import {
       mr='45px'
       >
         
-        <Modal isOpen={isFirstOpen} onClose={onFirstClose} isCentered size={'4xl'}>
+        <Modal closeOnOverlayClick={false} isOpen={isFirstOpen} onClose={onFirstClose} isCentered size={'4xl'}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader fontSize="5xl" >{cards.jobTitle}</ModalHeader>
@@ -59,12 +59,9 @@ import {
           </ModalBody>
 
           <ModalFooter>
-            <Button _focus={{ border:'none' }} mr={3} onClick={onFirstClose}>
+            <Button bg='#fab717' _hover={{bg:'#f6ce6f'}} _focus={{ border:'none' }} mr={3} onClick={onFirstClose}>
               Close
             </Button>
-            <Button bg='#fab717' _focus={{ border:'none' }} onClick={() => {
-                                setOverlay(<OverlayOne />)
-                                onSecondOpen()}}>Apply</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -81,7 +78,7 @@ import {
           {cards.shortDescription}
         </chakra.p>
 
-        <Modal  isOpen={isSecondOpen} onClose={onSecondClose} size='lg'>
+        {/* <Modal  isOpen={isSecondOpen} onClose={onSecondClose} size='lg'>
                 {overlay}
                 <ModalContent>
                     <ModalHeader color={'#2b2b2b'}>Apply for job</ModalHeader>
@@ -93,9 +90,10 @@ import {
                      <Button _focus={{ border:'none' }} onClick={onSecondClose}>Close</Button>
                     </ModalFooter>
                 </ModalContent>
-                            </Modal>
+                            </Modal> */}
         
-      </Box> <Flex  w='100%' justifyContent={'flex-end'}><IconButton _focus={{ border:'none' }} justifyContent={'center'} w={isDesktop ? "20%" : '50%'} onClick={onFirstOpen}><Text>Read more</Text></IconButton></Flex>
+      </Box> 
+      <Flex  w='100%' justifyContent={'flex-end'}><IconButton _focus={{ border:'none' }} justifyContent={'center'} w={isDesktop ? "20%" : '50%'} onClick={onFirstOpen}><Text>Read more</Text></IconButton></Flex>
     </Box> </motion.div>
     )
 

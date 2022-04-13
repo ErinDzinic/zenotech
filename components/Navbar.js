@@ -6,22 +6,25 @@ import {
   IconButton,
   useDisclosure,
   Stack,
+  color,
   
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import LogoGray from  "./Logos/LogoGray"  
 import { motion } from "framer-motion"
+import { useState } from 'react';
 
 
 const Links = [{name: 'Home', href:'#'},
                {name: 'Career', href :'#career'},
-               {name: 'Partners',href:'#partners'}, 
+               {name: 'Partners',href:'#partner'}, 
                {name: 'About us', href:'#about'},
             ];
 
 export default function withAction() {
   const { isOpen, onOpen, onClose,  } = useDisclosure();
   
+
   return (
     <>
       <Box px={6} w='100%' position='fixed' zIndex={10} top='0' right='0'  bg='white' h={isOpen?'100%':''} boxShadow='md' >
@@ -43,6 +46,7 @@ export default function withAction() {
        
           <HStack spacing={8} alignItems={'center'}  >
             <HStack
+              id='navDiv'
               as={'nav'}
               fontSize='20px'
               fontWeight='bold'
@@ -55,11 +59,10 @@ export default function withAction() {
                 <Link key={link.name} href={link.href}
                  px={2}
                  py={1}
-                 color="black"
                  _hover={{
                  color: '#fab717',
                  }}
-                 _focus={{border: 'none'}}
+                 _focus={{border:'none'}}
                 >{link.name}</Link>
               ))}
             </HStack>
@@ -77,7 +80,6 @@ export default function withAction() {
                 py={1}
                 border='2px solid #fab717'
                 color="#2b2b2b"
-                
                 _hover={{
                   textDecoration: 'none'
                 }}

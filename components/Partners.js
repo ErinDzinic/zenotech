@@ -3,8 +3,10 @@ import * as React from 'react'
 import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
 import LogoGray from  "./Logos/LogoGray" 
 import Fade from 'react-reveal/Fade';
+import { useRef } from 'react'
 
 const Testimonial = (props) => {
+  const partnerRef = useRef()
   const { logo, children, image, author, role, colorScheme: c } = props
   const accentColor = mode(`#2b2b2b`, `${c}.400`)
   return (
@@ -15,6 +17,8 @@ const Testimonial = (props) => {
       }}
       bg={mode('white', 'gray.700')}
       shadow="lg"
+      ref={partnerRef}
+      id='partner'
     >
       <Flex
         direction="column"

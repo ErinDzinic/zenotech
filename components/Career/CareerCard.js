@@ -13,14 +13,19 @@ import {
     },
     {
       jobTitle: 'React Native',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc leo, consectetur et interdum vitae, egestas dignissim nunc. Donec nec fringilla turpis. Phasellus gravida tortor lectus, mattis semper mauris dictum in. Aliquam erat volutpat. Integer nec nisi at urna hendrerit molestie id sagittis ipsum. In dignissim urna eget ex mattis molestie. Donec vel justo at sapien tristique porta.'
-
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc leo, consectetur et interdum vitae, egestas dignissim nunc. Donec nec fringilla turpis. Phasellus gravida tortor lectus, mattis semper mauris dictum in. Aliquam erat volutpat. Integer nec nisi at urna hendrerit molestie id sagittis ipsum. In dignissim urna eget ex mattis molestie. Donec vel justo at sapien tristique porta.',
+      longDescription: ''
     }
     ,
     {
       jobTitle: 'Frontend developer ',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc leo, consectetur et interdum vitae, egestas dignissim nunc. Donec nec fringilla turpis. Phasellus gravida tortor lectus, mattis semper mauris dictum in. Aliquam erat volutpat. Integer nec nisi at urna hendrerit molestie id sagittis ipsum. In dignissim urna eget ex mattis molestie. Donec vel justo at sapien tristique porta.'
-
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc leo, consectetur et interdum vitae, egestas dignissim nunc. Donec nec fringilla turpis. Phasellus gravida tortor lectus, mattis semper mauris dictum in. Aliquam erat volutpat. Integer nec nisi at urna hendrerit molestie id sagittis ipsum. In dignissim urna eget ex mattis molestie. Donec vel justo at sapien tristique porta.',
+      longDescription: ''
+    },
+    {
+      jobTitle: 'Frontend developer ',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nunc leo, consectetur et interdum vitae, egestas dignissim nunc. Donec nec fringilla turpis. Phasellus gravida tortor lectus, mattis semper mauris dictum in. Aliquam erat volutpat. Integer nec nisi at urna hendrerit molestie id sagittis ipsum. In dignissim urna eget ex mattis molestie. Donec vel justo at sapien tristique porta.',
+      longDescription: ''
     }
 ]
   

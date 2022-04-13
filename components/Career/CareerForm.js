@@ -15,50 +15,6 @@ import { useState } from 'react'
 
 export default function contact() {
 
-  const [name, setName] = useState('')
-  const [surname, setSurname] = useState('')
-  const [email, setEmail] = useState('')
-  const [number,setNumber] = useState('')
-  const [message, setMessage] = useState('')
-  const [cv, setCv] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = (e) =>{
-       e.preventDefault()
-       console.log('sending')
-
-      let data = {
-        name,
-        email,
-        surname,
-        message,
-        number,
-        cv,
-      }
-
-      fetch('./api/contact', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }).then((res) => {
-        console.log('Response received')
-        if (res.status === 200) {
-          console.log('Response succeeded!')
-          setSubmitted(true)
-          setName(' ')
-          setSurname(' ')
-          setNumber(' ')
-          setEmail(' ')
-          setMessage(' ')
-          setCv(' ')
-        }
-      })
-  }
-
-
     return (
       <Box bg='white'
         borderRadius={'lg'}
@@ -69,11 +25,10 @@ export default function contact() {
 
         <VStack spacing={5} >
       <FormControl isRequired>
-        <FormLabel htmlFor='name'>Name</FormLabel>
+        <FormLabel >Name</FormLabel>
         <InputGroup>
           <InputLeftElement children={<BsPerson />} />
           <Input 
-          onChange={(e) => {setName(e.target.value)}} 
           type="text" 
           name="name" 
           placeholder="Your Name" />
@@ -84,7 +39,7 @@ export default function contact() {
         <FormLabel htmlFor='surname'>Surname</FormLabel>
         <InputGroup>
           <InputLeftElement children={<BsPerson />} />
-          <Input onChange={(e) => {setSurname(e.target.value)}}
+          <Input 
            type="text" 
            name="surname" 
            placeholder="Your Surname" />
@@ -92,11 +47,10 @@ export default function contact() {
         </FormControl>
 
       <FormControl isRequired>
-        <FormLabel htmlFor='email'>Email</FormLabel>
+        <FormLabel >Email</FormLabel>
         <InputGroup>
           <InputLeftElement children={<MdOutlineEmail />} />
           <Input
-            onChange={(e) => {setEmail(e.target.value)}}
             type="email"
             name="email"
             placeholder="Your Email"
