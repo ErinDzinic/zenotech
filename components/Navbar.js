@@ -26,10 +26,9 @@ export default function withAction() {
   
 
   return (
-    <>
       <Box px={6} w='100%' position='fixed' zIndex={10} top='0' right='0'  bg='white' h={isOpen?'100%':''} boxShadow='md' >
       
-        <Flex h={'16'} alignItems={'center'} justifyContent={'space-between'} >
+        <Flex h={'20'} alignItems={'center'} justifyContent={'space-between'} >
         <LogoGray pl='55px'/>
           <IconButton
             size={'lg'}
@@ -44,13 +43,12 @@ export default function withAction() {
             _focus={{ border: 'none '}}
           />
        
-          <HStack spacing={8} alignItems={'center'}  >
+          <HStack spacing={8} display={'flex'} alignItems={'center'}  >
             <HStack
               id='navDiv'
               as={'nav'}
               fontSize='20px'
               fontWeight='bold'
-              pt='18px'
               w='100%'
               spacing={6}
               display={{ base: 'none', md: 'flex' }}
@@ -59,6 +57,7 @@ export default function withAction() {
                 <Link key={link.name} href={link.href}
                  px={2}
                  py={1}
+                 fontSize='1.5rem'
                  _hover={{
                  color: '#fab717',
                  }}
@@ -92,6 +91,5 @@ export default function withAction() {
           </Box>
         ) : null}
       </Box>
-    </>
   );
 }
