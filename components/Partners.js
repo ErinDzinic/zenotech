@@ -1,9 +1,10 @@
 import { Box, Flex, Img, SimpleGrid, Text, useColorModeValue as mode } from '@chakra-ui/react'
 import * as React from 'react'
 import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im'
-import LogoGray from  "./Logos/LogoGray" 
+import LogoGray from "./Logos/LogoGray"
 import Fade from 'react-reveal/Fade';
 import { useRef } from 'react'
+import MeneaLogo from '../public/images/MeneaLogo.png';
 
 const Testimonial = (props) => {
   const partnerRef = useRef()
@@ -118,7 +119,7 @@ const Testimonial = (props) => {
   )
 }
 
-export default function Partners(){
+export default function Partners() {
   return (
     <Box as="section" bg={mode('white', 'gray.800')} py="12">
       <Fade top><Text align={'center'} fontSize='7xl' mb='50px' fontWeight={'bold'}>Our Partners</Text></Fade>
@@ -140,30 +141,28 @@ export default function Partners(){
           spacing="20"
         >
           <Fade left>
-          <Testimonial
-            logo={<LogoGray />}
-            author="Kunle Adigun"
-            role="Chief Technology Officer, Plumtic HQ"
-            colorScheme="blue"
-            image="https://images.unsplash.com/photo-1547037579-f0fc020ac3be?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTI2fHxtYW4lMjBzbWlsaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          </Testimonial></Fade>
+            <Testimonial
+              logo={<LogoGray companyLogo='buddycompany' />}
+              author="Metin Asqari"
+              role="Chief Technology Officer at BuddyCompany"
+              colorScheme="blue"
+              image="https://avatars.githubusercontent.com/u/19522616?v=4"
+            >
+              BuddyCompany is the one-stop shop for services around home. From cleaning to painting to gardening, we can do absolutely almost everything.
+            </Testimonial></Fade>
           <Fade right>
-          <Testimonial
-            logo={<LogoGray />}
-            author="Johanna Kate"
-            role="Marketing Manager, Chat Monkey"
-            colorScheme="yellow"
-            image="https://images.unsplash.com/photo-1486116736668-6384736c9330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTA3fHxsYWR5JTIwaGVhZHNob3R8ZW58MHx8MHw%3D&auto=format&fit=crop&w=800&q=60"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          </Testimonial>
-          
+            <Testimonial
+              logo={<LogoGray companyLogo='menea' />}
+              author="Elvis Nazdrajić"
+              role="CEO at Menea"
+              colorScheme="yellow"
+              image="https://media-exp1.licdn.com/dms/image/C5603AQGuG6nLo9NC8Q/profile-displayphoto-shrink_800_800/0/1560861897778?e=1655337600&v=beta&t=ixpUELI1zhuWuTK-VhYnMW7SZE2We8m0WzflEroXXZc"
+            >
+              Menea AB is a trading and consulting company that started in 2013 with focus on industrial manufacturers from southeastern Europe.
+            </Testimonial>
+
           </Fade>
-          
+
         </SimpleGrid>
       </Box>
     </Box>
