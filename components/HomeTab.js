@@ -120,10 +120,11 @@ export default function CaptionCarousel() {
                 backgroundRepeat="no-repeat"
                 backgroundSize="cover"
                 backgroundImage={`url(${card.image})`}
+                boxShadow='5px -109px 105px 23px rgba(0,0,0,0.85) inset'
               >
                 {/* This is the block you need to change, to customize the caption */}
                 <Flex size="0" height="600px" position="sticky" w='100%' p='60px'>
-                  <Flex backgroundColor='rgba(0, 0, 0, 0.45)' h='380px' w={isDesktop ? '35%' : '100%'} position='absolute' right={isDesktop? '100' : '0'} top='140'>
+                  <Flex borderRadius='8px' backgroundColor='rgba(0, 0, 0, 0.45)' h='380px' w={isDesktop ? '35%' : '100%'} position='absolute' right={isDesktop? '100' : '0'} top='140'>
                     <Stack
                       spacing={6}
                       w={'full'}

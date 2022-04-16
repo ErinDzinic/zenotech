@@ -29,15 +29,7 @@ export const links = [
             </Badge>
           </LightMode>
         ),
-      },
-      {
-        label: 'Press',
-        href: '#',
-      },
-      {
-        label: 'FAQ',
-        href: '#',
-      },
+      }
     ],
   },
   {
@@ -45,22 +37,6 @@ export const links = [
     links: [
       {
         label: 'How it works',
-        href: '#',
-      },
-      {
-        label: 'Pricing',
-        href: '#',
-      },
-      {
-        label: 'Use Cases',
-        href: '#',
-      },
-      {
-        label: 'Integrations',
-        href: '#',
-      },
-      {
-        label: 'SAML SSO',
         href: '#',
       },
     ],
@@ -76,26 +52,11 @@ export const links = [
         label: 'Partnerships',
         href: '#',
       },
-      {
-        label: 'Case studies',
-        href: '#',
-      },
-      {
-        label: 'Help Center',
-        href: '#',
-      },
-      {
-        label: 'Media Assets',
-        href: '#',
-      },
     ],
   },
   {
     title: 'Contact',
     links: [
-      {
-        label: '+387603005860'
-      },
       {
         label: 'info@zenotech.se'
       },

@@ -1,24 +1,25 @@
 import {
-    Box,
-    Divider,
-    Flex,
-    HStack,
-    SimpleGrid,
-    Stack,
-    Text,
-    Wrap,
-  } from '@chakra-ui/react'
-  import * as React from 'react'
-  import { SocialButton } from './SocialButton'
-  import { footerLinks, links, socialLinks } from './_dataFooter'
-  import LogoFooter from  "./LogoFooter" 
-  import { motion } from "framer-motion"
-  
-  
-  export default function Footer() {
-      return(
+  Box,
+  Divider,
+  Flex,
+  HStack,
+  SimpleGrid,
+  Stack,
+  Text,
+  Wrap,
+} from '@chakra-ui/react'
+import * as React from 'react'
+import { SocialButton } from './SocialButton'
+import { footerLinks, links, socialLinks } from './_dataFooter'
+import LogoFooter from "./LogoFooter"
+import { motion } from "framer-motion"
+import Link from 'next/link'
+
+
+export default function Footer() {
+  return (
     <Box as="footer" bg="#2b2b2b" color="white" py="64px">
-      <Box  maxW="7xl" px="8" mx="auto">
+      <Box maxW="7xl" px="8" mx="auto">
         <Flex
           direction={{
             base: 'column',
@@ -36,20 +37,20 @@ import {
               lg: 0,
             }}
           >
-          <LogoFooter />
-          
+            <LogoFooter />
+
             <HStack spacing="5" mt="8" ml='-20' as="ul" justifyContent={'center'}>
               {socialLinks.map((link, idx) => (
-               <motion.div whileHover={{
-                 rotate: '30deg'
-               }}
-               whileTap={{
-                rotate: '30deg'
-               }}>
-                 <SocialButton key={idx} href={link.href}>
-                  <Box srOnly>{link.label}</Box>
-                  {link.icon}
-                </SocialButton></motion.div> 
+                <motion.div whileHover={{
+                  rotate: '30deg'
+                }}
+                  whileTap={{
+                    rotate: '30deg'
+                  }}>
+                  <SocialButton key={idx} href={link.href}>
+                    <Box srOnly>{link.label}</Box>
+                    {link.icon}
+                  </SocialButton></motion.div>
               ))}
             </HStack>
           </Box>
@@ -76,31 +77,32 @@ import {
                 </Text>
                 <Stack as="ul" listStyleType="none">
                   {group.links.map((link, idx) => (
-                    <Box as="li" key={idx}>
-                      <Box
-                        as="a"
-                        href={link.href}
-                        _hover={{
-                          color: '#fab717',
-                          textDecor: 'none',
-                        }}
-                        target='_blank'
-                      >
-                        {link.label}
-                        {link.badge && (
-                          <Box as="span" marginStart="2">
-                            {link.badge}
-                          </Box>
-                        )}
+                    <Link href={link}>
+                      <Box as="li" key={idx}>
+                        <Box
+                          as="a"
+                          _hover={{
+                            color: '#fab717',
+                            textDecor: 'none',
+                            cursor:'pointer'
+                          }}
+                        >
+                          {link.label}
+                          {link.badge && (
+                            <Box as="span" marginStart="2">
+                              {link.badge}
+                            </Box>
+                          )}
+                        </Box>
                       </Box>
-                    </Box>
+                    </Link>
                   ))}
                 </Stack>
               </Box>
             ))}
           </SimpleGrid>
         </Flex>
-        
+
         <Flex
           direction={{
             base: 'column-reverse',
@@ -128,5 +130,5 @@ import {
         </Flex>
       </Box>
     </Box>
-  )}
-  
+  )
+}
