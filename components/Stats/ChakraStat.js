@@ -13,6 +13,7 @@ export const Stat = (props) => {
         fontSize="6xl"
         fontWeight="extrabold"
         color={useColorModeValue('#fab717', 'blue.300')}
+        w='100%'
       >
         {value}
       </Box>

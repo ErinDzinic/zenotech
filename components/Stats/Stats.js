@@ -22,7 +22,7 @@ return(
     <Fade right>
     <Box mb="12" textAlign="center">
       <Heading fontFamily={'Rajdhani'} color='#fab717' size="xl" fontWeight="extrabold" lineHeight="normal">
-        ZenoTech through matemathics
+        We are ZenoTech
       </Heading>
       <Text
         fontSize="lg"
@@ -30,8 +30,7 @@ return(
         fontWeight="medium"
         color={useColorModeValue('white', 'whiteAlpha.700')}
       >
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-        consequat duis enim.
+        Let's ask the numbers?
       </Text>
     </Box>
     <Stack
@@ -42,9 +41,9 @@ return(
       }}
       divider={<StackDivider />}
     >
-      <Stat title="Amet minim mollit non deserunt ullamco." value="85%" />
-      <Stat title="Amet minim mollit non deserunt ullamco." value="3/4" />
-      <Stat title="Amet minim mollit non deserunt ullamco." value="45K" />
+      <Stat title="Worked with over 15 freelancers in this fields." value="15+" />
+      <Stat title="Established great connection between clients and our resources from Sweden and Bosnia and Herzegovina." value="2" />
+      <Stat title="Fulfilled the needs of all clients we collaborated with." value="3/3" />
     </Stack>
     </Fade>
   </Box>
