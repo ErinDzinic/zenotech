@@ -45,14 +45,14 @@ export default function CaptionCarousel() {
       {
         title: 'Mostar',
         text:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Our headquarters are in Mostar, the city of the sun. The perfect place to strike a balance between work and vacancy.",
         image:
           '../images/intera.jpg',
       },
       {
         title: 'ZenoTech',
         text:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..",
+        "With your help, Zenotech creates and deliver technology solutions that fit your needs and drive the results you want.”",
         image:
           '../images/mostar.jpg',
       },
@@ -120,10 +120,11 @@ export default function CaptionCarousel() {
                 backgroundRepeat="no-repeat"
                 backgroundSize="cover"
                 backgroundImage={`url(${card.image})`}
+                boxShadow='5px -109px 105px 23px rgba(0,0,0,0.85) inset'
               >
                 {/* This is the block you need to change, to customize the caption */}
                 <Flex size="0" height="600px" position="sticky" w='100%' p='60px'>
-                  <Flex backgroundColor='rgba(0, 0, 0, 0.45)' h='380px' w={isDesktop ? '35%' : '100%'} position='absolute' right={isDesktop? '100' : '0'} top='140'>
+                  <Flex borderRadius='8px' backgroundColor='rgba(0, 0, 0, 0.45)' h='380px' w={isDesktop ? '35%' : '100%'} position='absolute' right={isDesktop? '100' : '0'} top='140'>
                     <Stack
                       spacing={6}
                       w={'full'}
@@ -136,7 +137,7 @@ export default function CaptionCarousel() {
                       <Heading fontFamily='Rajdhani' fontWeight='extrabold' fontSize={{ base: '3xl', md: '4xl', lg: '7xl' }} color='#fab717'>
                         {card.title}
                       </Heading>
-                      <Text align='end' fontSize={{ base: 'md', lg: 'lg' }} color="White">
+                      <Text textAlign={'center'} align='end' fontSize={{ base: 'lg' }} fontWeight={700} color="White">
                         {card.text}
                       </Text>
                     </Stack>
