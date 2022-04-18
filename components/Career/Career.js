@@ -58,35 +58,25 @@ export default function Career() {
             <Heading fontFamily={'Rajdhani'} textAlign='center' pb='23px' pt='15px'>Current Job Openings</Heading>
             <Scrollbars autoHide style={{ height: 450 }} ><CareerCard /> </Scrollbars>
             <Flex justifyContent="center" alignItems="center" mt={isDesktop?'40px' : '20px'} ml='7px'>
+            <Flex justifyContent="center" alignItems="center" mt='40px' ml='7px'>
               <Text fontSize={'25px'} color={'black'} textAlign='center'>
                 Applying for desired job?
                 Please send us your CV to our e-mail address
               </Text>
 
             </Flex>
+            </Flex>
             <Flex justify={'center'}>
                 <Text textAlign={'center'} mt={isDesktop ? '15px' : ''}  fontSize={'25px'} color={'#fab717'} >
                   info</Text><Text textAlign={'center'} mt={isDesktop ? '15px' : ''}   fontSize={'25px'} color={'#2b2b2b'}>@</Text><Text textAlign={'center'} mt={isDesktop ? '15px' : ''}  fontSize={'25px'} color={'#fab717'}>zenotech.se</Text>
+                <Text textAlign={'center'} mt='10px' fontSize={'25px'} color={'#fab717'} >
+                  info</Text><Text textAlign={'center'} mt='10px' fontSize={'25px'} color={'#2b2b2b'}>@</Text><Text textAlign={'center'} mt='10px' fontSize={'25px'} color={'#fab717'}>zenotech.se</Text>
             </Flex>
           </Box>
         </Fade>
       </Flex>
 
       <DiagonalDiv />
-
-      {/* <Modal  isOpen={isOpen} onClose={onClose} size='lg'>
-                {overlay}
-                <ModalContent>
-                    <ModalHeader color={'#2b2b2b'}>Apply for job</ModalHeader>
-                        <ModalCloseButton />
-                    <ModalBody zIndex={9999}>
-                        <CareerForm />
-                    </ModalBody>
-                    <ModalFooter>
-                     <Button onClick={onClose}>Close</Button>
-                    </ModalFooter>
-                </ModalContent>
-                            </Modal> */}
 
     </>
 

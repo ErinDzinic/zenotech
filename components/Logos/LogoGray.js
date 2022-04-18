@@ -25,6 +25,7 @@ export default function Logo(props) {
 
         <Box {...props}>
             <Link _hover={{cursor:'default'}} _focus={{ border: 'none' }}>
+            <Link href="#" _focus={{ border: 'none' }}>
                 {
                     props.companyLogo
                         ?
@@ -38,6 +39,7 @@ export default function Logo(props) {
                             <Img p='15px' pt='10px' w='200px' src={'../images/ztgr.png'} alt='logo' />
                         </Box>
                 }
+            </Link>
             </Link>
         </Box>
     )
