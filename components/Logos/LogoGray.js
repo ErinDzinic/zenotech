@@ -24,7 +24,7 @@ export default function Logo(props) {
     return (
 
         <Box {...props}>
-            <Link href="#" _focus={{ border: 'none' }}>
+            <Link cursor={'default'} _focus={{ border: 'none' }}>
                 {
                     props.companyLogo
                         ?
