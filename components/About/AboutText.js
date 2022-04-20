@@ -2,10 +2,11 @@ import React from "react";
 import { Container, SimpleGrid, Stack, Heading, Text, Flex, Image, useColorModeValue as mode } from '@chakra-ui/react'
 import Fade from 'react-reveal/Fade';
 import useMediaQuery from '../hooks/useMediaQuery';
+import { useRef } from 'react'
 
 export default function AboutText() {
   const isDesktop = useMediaQuery('(min-width: 960px)');
-
+  
   const Story = () => {
     return (
       <Stack spacing={8} flexDirection='column'>

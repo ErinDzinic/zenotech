@@ -74,20 +74,6 @@ export default function Career() {
 
       <DiagonalDiv />
 
-      {/* <Modal  isOpen={isOpen} onClose={onClose} size='lg'>
-                {overlay}
-                <ModalContent>
-                    <ModalHeader color={'#2b2b2b'}>Apply for job</ModalHeader>
-                        <ModalCloseButton />
-                    <ModalBody zIndex={9999}>
-                        <CareerForm />
-                    </ModalBody>
-                    <ModalFooter>
-                     <Button onClick={onClose}>Close</Button>
-                    </ModalFooter>
-                </ModalContent>
-                            </Modal> */}
-
     </>
 
   )

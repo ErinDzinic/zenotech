@@ -2,11 +2,14 @@ import { Box, Heading, Stack, StackDivider, Text, useColorModeValue } from '@cha
 import * as React from 'react'
 import { Stat } from './ChakraStat'
 import Fade from 'react-reveal/Fade';
+import { useRef } from 'react'
 
 export default function Stats(){
-
+  const statsRef = useRef()
 return(
   <Box
+    ref={statsRef}
+    id= "stats"
     as="section"
     maxW="7xl"
     mx="auto"

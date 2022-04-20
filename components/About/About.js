@@ -11,7 +11,7 @@ import {
 
   export default function SplitWithImage() {
     const aboutRef = useRef()
-
+    const storyRef = useRef()
     return (
         <>
         <Box w='100%'
@@ -20,7 +20,11 @@ import {
         id='about'>
         
         <Features />
+        
+        <Box ref={storyRef} id='story' >
         <DiagonalDiv />
+        </Box>
+
         <AboutText />
         <Stats />
         
