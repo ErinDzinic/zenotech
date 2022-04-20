@@ -11,7 +11,6 @@ import {
 import React from 'react';
 import { BsPerson } from 'react-icons/bs';
 import { MdCall, MdOutlineEmail } from 'react-icons/md';
-import { useState } from 'react'
 
 export default function contact() {
 

@@ -4,16 +4,12 @@ import {
   HStack,
   Link,
   IconButton,
-  useDisclosure,
   Stack,
-  color,
-  
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import LogoGray from  "./Logos/LogoGray"  
 import { motion } from "framer-motion"
-import { useState } from 'react';
-
+import { useDisclosure } from '@chakra-ui/react'
 
 const Links = [{name: 'Home', href:'#'},
                {name: 'Career', href :'#career'},

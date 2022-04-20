@@ -57,14 +57,12 @@ export default function Career() {
           <Box borderRadius={'20px'} w={isDesktop ? '750px' : '355px'} bg={'white'} h='700px' >
             <Heading fontFamily={'Rajdhani'} textAlign='center' pb='23px' pt='15px'>Current Job Openings</Heading>
             <Scrollbars autoHide style={{ height: 450 }} ><CareerCard /> </Scrollbars>
-            <Flex justifyContent="center" alignItems="center" mt={isDesktop?'40px' : '20px'} ml='7px'>
-            <Flex justifyContent="center" alignItems="center" mt='40px' ml='7px'>
+            <Flex justifyContent="center" alignItems="center" mt={isDesktop?'40px':''} ml='7px'>
               <Text fontSize={'25px'} color={'black'} textAlign='center'>
                 Applying for desired job?
                 Please send us your CV to our e-mail address
               </Text>
 
-            </Flex>
             </Flex>
             <Flex justify={'center'}>
                 <Text textAlign={'center'} mt={isDesktop ? '15px' : ''}  fontSize={'25px'} color={'#fab717'} >

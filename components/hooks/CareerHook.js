@@ -48,7 +48,7 @@ const IsolatedModal = ({ cards }) => {
       mr='45px'
     >
 
-      <Modal closeOnOverlayClick={false} isOpen={isFirstOpen} onClose={onFirstClose} isCentered size={'4xl'}>
+      <Modal closeOnOverlayClick={false} isOpen={isFirstOpen} onClose={onFirstClose} size={isDesktop?'4xl':'full'}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader fontSize="5xl" >{cards.jobTitle}</ModalHeader>
@@ -91,20 +91,6 @@ const IsolatedModal = ({ cards }) => {
         <chakra.p mt={2} color="gray.600">
           {cards.shortDescription}
         </chakra.p>
-
-        {/* <Modal  isOpen={isSecondOpen} onClose={onSecondClose} size='lg'>
-                {overlay}
-                <ModalContent>
-                    <ModalHeader color={'#2b2b2b'}>Apply for job</ModalHeader>
-                        <ModalCloseButton _focus={{ border:'none' }}/>
-                    <ModalBody zIndex={9999}>
-                        <CareerForm />
-                    </ModalBody>
-                    <ModalFooter>
-                     <Button _focus={{ border:'none' }} onClick={onSecondClose}>Close</Button>
-                    </ModalFooter>
-                </ModalContent>
-                            </Modal> */}
 
       </Box>
       <Flex w='100%' justifyContent={'flex-end'}><IconButton _focus={{ border: 'none' }} justifyContent={'center'} w={isDesktop ? "20%" : '50%'} onClick={onFirstOpen}><Text>Read more</Text></IconButton></Flex>

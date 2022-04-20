@@ -13,11 +13,11 @@ export const links = [
     links: [
       {
         label: 'Why ZenoTech',
-        href: '#about',
+        href: '#stats',
       },
       {
         label: 'Our story',
-        href: '#',
+        href: '#story',
       },
       {
         label: 'Careers',
@@ -37,7 +37,7 @@ export const links = [
     links: [
       {
         label: 'How it works',
-        href: '#',
+        href: '#about',
       },
     ],
   },
@@ -46,11 +46,11 @@ export const links = [
     links: [
       {
         label: 'Blog',
-        href: '#',
+        href: '404',
       },
       {
         label: 'Partnerships',
-        href: '#',
+        href: '404',
       },
     ],
   },

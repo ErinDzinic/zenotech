@@ -77,9 +77,9 @@ export default function Footer() {
                 </Text>
                 <Stack as="ul" listStyleType="none">
                   {group.links.map((link, idx) => (
-                    <Link href={link}>
                       <Box as="li" key={idx}>
                         <Box
+                          href={link.href}
                           as="a"
                           _hover={{
                             color: '#fab717',
@@ -95,7 +95,6 @@ export default function Footer() {
                           )}
                         </Box>
                       </Box>
-                    </Link>
                   ))}
                 </Stack>
               </Box>
