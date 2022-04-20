@@ -65,6 +65,8 @@ export default function Career() {
 
             </Flex>
             <Flex justify={'center'}>
+                <Text textAlign={'center'} mt={isDesktop ? '15px' : ''}  fontSize={'25px'} color={'#fab717'} >
+                  info</Text><Text textAlign={'center'} mt={isDesktop ? '15px' : ''}   fontSize={'25px'} color={'#2b2b2b'}>@</Text><Text textAlign={'center'} mt={isDesktop ? '15px' : ''}  fontSize={'25px'} color={'#fab717'}>zenotech.se</Text>
                 <Text textAlign={'center'} mt='10px' fontSize={'25px'} color={'#fab717'} >
                   info</Text><Text textAlign={'center'} mt='10px' fontSize={'25px'} color={'#2b2b2b'}>@</Text><Text textAlign={'center'} mt='10px' fontSize={'25px'} color={'#fab717'}>zenotech.se</Text>
             </Flex>

@@ -8,7 +8,7 @@ import MeneaLogo from '../public/images/MeneaLogo.png';
 
 const Testimonial = (props) => {
   const partnerRef = useRef()
-  const { logo, children, image, author, role, colorScheme: c } = props
+  const { logo, href, children, image, author, role, colorScheme: c } = props
   const accentColor = mode(`#2b2b2b`, `${c}.400`)
   return (
     <Flex
@@ -107,6 +107,7 @@ const Testimonial = (props) => {
           w="16"
           h="16"
           objectFit="cover"
+          onClick={() => console.log("Image clicked")}
         />
         <Box position="relative" fontSize="sm" mt="3" textAlign="center">
           <Text as="h3" fontWeight="bold" fontSize="md">
