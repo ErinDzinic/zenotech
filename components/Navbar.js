@@ -22,9 +22,9 @@ export default function withAction() {
   
 
   return (
-      <Box px={6} w='100%' position='fixed' zIndex={10} top='0' right='0'  bg='white' h={isOpen?'100%':''} boxShadow='md' >
+      <Box px={6} w='100%' position='fixed' zIndex={10} top='0' bg='white' h={isOpen?'100%':''} boxShadow='md' >
       
-        <Flex h={'20'} alignItems={'center'} justifyContent={'space-between'} >
+        <Flex h={'20'} alignItems={'center'} justifyContent={'space-between'}>
         <LogoGray pl='55px'/>
           <IconButton
             size={'lg'}
@@ -66,7 +66,7 @@ export default function withAction() {
         </Flex>
         
         {isOpen ? (
-          <Box w='100%' pb={6} display={{ md: 'none' }} align='center' position='relative' top='150'>
+          <Box w='100%' pb={6} align='center' position='relative' top='150'>
             <Stack as={'nav'} spacing={4} >
               {Links.map((link) => (
                 <Link key={link.name} href={link.href}

@@ -19,6 +19,13 @@ a {
   font-family: 'Rajdhani';
 }
 
+@media only screen and (max-width: 960px) {
+  html,body{
+    overflow-y: auto;
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
   
 
 

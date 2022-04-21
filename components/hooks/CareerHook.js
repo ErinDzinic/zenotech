@@ -25,16 +25,7 @@ import { useDisclosure } from '@chakra-ui/react'
 const IsolatedModal = ({ cards }) => {
 
   const isDesktop = useMediaQuery('(min-width: 960px)');
-  const OverlayOne = () => (
-    <ModalOverlay
-      bg='blackAlpha.300'
-      backdropFilter='blur(10px)'
-    />)
-
   const { isOpen: isFirstOpen, onOpen: onFirstOpen, onClose: onFirstClose } = useDisclosure()
-  const { isOpen: isSecondOpen, onOpen: onSecondOpen, onClose: onSecondClose } = useDisclosure()
-  const [overlay, setOverlay] = React.useState(<OverlayOne />)
-
   return (
     <motion.div whileHover={{ scale: 1.05 }}><Box boxShadow='dark-lg'
       mx="auto"
@@ -66,10 +57,9 @@ const IsolatedModal = ({ cards }) => {
               <Text fontSize={'1.2rem'} fontWeight={700}>Starting date:</Text>
               <Text marginLeft={'1.2rem'}>{cards.startingDate}</Text>
             </Box>
-            <Box marginTop={'.5rem'} display={'flex'} alignItems={'center'} flexDirection='row'>
+            <Box marginTop={'.5rem'} display={'flex'} alignItems={'flex-start'} flexDirection='row'>
               <Text fontSize={'1.2rem'} fontWeight={700}>Responsibilities:</Text>
-              <Text textTransform={'initial'} marginLeft={'1.2rem'}>{cards.longDescription}</Text>
-            </Box>
+            </Box><Text textTransform={'initial'}>{cards.longDescription}</Text>
           </ModalBody>
 
           <ModalFooter>
@@ -93,7 +83,7 @@ const IsolatedModal = ({ cards }) => {
         </chakra.p>
 
       </Box>
-      <Flex w='100%' justifyContent={'flex-end'}><IconButton _focus={{ border: 'none' }} justifyContent={'center'} w={isDesktop ? "20%" : '50%'} onClick={onFirstOpen}><Text>Read more</Text></IconButton></Flex>
+      <Flex w='100%' justifyContent={'flex-end'}><IconButton borderBottom={'2px solid #fab717'} _focus={{ borderBottom: '2px solid #fab717' }} justifyContent={'center'} w={isDesktop ? "20%" : '50%'} onClick={onFirstOpen}><Text>Read more</Text></IconButton></Flex>
     </Box> </motion.div>
   )
 

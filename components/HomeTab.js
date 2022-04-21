@@ -47,14 +47,17 @@ export default function CaptionCarousel() {
         text:
           "Our headquarters are in Mostar, the city of the sun. The perfect place to strike a balance between work and vacancy.",
         image:
-          '../images/intera.jpg',
+          '../images/mostar2.jpg',
       },
       {
         title: 'ZenoTech',
         text:
-        "With your help, Zenotech creates and deliver technology solutions that fit your needs and drive the results you want.”",
+        [
+          "Our team of ambitious and innovative developers use the latest development technologies to deliver solutions tailored to your specific requirements.",
+          " We offer top notch web or mobile solutions.",
+        ],
         image:
-          '../images/mostar.jpg',
+          '../images/intera2.jpg',
       },
       
     ];
@@ -64,7 +67,6 @@ export default function CaptionCarousel() {
       <Box
         position={'relative'}
         height={'650px'}
-        width={'full'}
         overflow={'hidden'}
       >
         <Box >
@@ -124,7 +126,7 @@ export default function CaptionCarousel() {
               >
                 {/* This is the block you need to change, to customize the caption */}
                 <Flex size="0" height="600px" position="sticky" w='100%' p='60px'>
-                  <Flex borderRadius='8px' backgroundColor='rgba(0, 0, 0, 0.45)' h='380px' w={isDesktop ? '35%' : '100%'} position='absolute' right={isDesktop? '100' : '0'} top='140'>
+                  <Flex padding='.5rem' borderRadius='8px' backgroundColor='rgba(0, 0, 0, 0.75)' h='380px' w={isDesktop ? '35%' : '100%'} position='absolute' right={isDesktop? '100' : '0'} top='140'>
                     <Stack
                       spacing={6}
                       w={'full'}
@@ -134,10 +136,10 @@ export default function CaptionCarousel() {
                       top="50%"
                       p='-5px'
                       transform="translate(0, -50%)">
-                      <Heading fontFamily='Rajdhani' fontWeight='extrabold' fontSize={{ base: '3xl', md: '4xl', lg: '7xl' }} color='#fab717'>
+                      <Text fontWeight='extrabold' pr={'30px'} fontSize={{ base: '4xl', md: '4xl', lg: '7xl' }} color='#fab717'>
                         {card.title}
-                      </Heading>
-                      <Text textAlign={'center'} align='end' fontSize={{ base: 'lg' }} fontWeight={700} color="White">
+                      </Text>
+                      <Text textAlign={'center'} align='end' pr='15px' fontSize={{ base: 'lg' }} fontWeight={800} color="White">
                         {card.text}
                       </Text>
                     </Stack>
