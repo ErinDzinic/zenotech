@@ -132,11 +132,11 @@ export default function CaptionCarousel() {
                       w={'full'}
                       maxW={'lg'}
                       position="absolute"
-                      alignItems='flex-end'
+                      alignItems={isDesktop?'flex-end':'center'}
                       top="50%"
                       p='-5px'
                       transform="translate(0, -50%)">
-                      <Text fontWeight='extrabold' pr={'30px'} fontSize={{ base: '4xl', md: '4xl', lg: '7xl' }} color='#fab717'>
+                      <Text fontWeight='extrabold' fontSize={{ base: '4xl', md: '4xl', lg: '7xl' }} color='#fab717'>
                         {card.title}
                       </Text>
                       <Text textAlign={'center'} align='end' pr='15px' fontSize={{ base: 'lg' }} fontWeight={800} color="White">

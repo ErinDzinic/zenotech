@@ -45,7 +45,7 @@ export default function Career() {
         <Fade>
           <Box borderRadius={'20px'} w={isDesktop ? '750px' : '355px'} bg={'white'} h='700px'>
             <Heading fontFamily={'Rajdhani'} textAlign='center' pb='23px' pt='15px'>Current Job Openings</Heading>
-            <Scrollbars autoHide style={isDesktop ? { height: '485px' }:{ height: '300px' }} >
+            <Scrollbars  style={isDesktop ? { height: '485px' }:{ height: '300px' }} >
               <CareerCard />
              </Scrollbars>
             <Flex justifyContent="center" alignItems="center" mt={isDesktop?'20px':'70px'} ml='7px'>

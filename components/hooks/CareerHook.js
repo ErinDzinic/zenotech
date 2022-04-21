@@ -17,7 +17,6 @@ import {
   ModalBody,
   ModalCloseButton,
 } from '@chakra-ui/react'
-import CareerForm from '../Career/CareerForm'
 import useMediaQuery from '../hooks/useMediaQuery';
 
 import { useDisclosure } from '@chakra-ui/react'
@@ -30,13 +29,13 @@ const IsolatedModal = ({ cards }) => {
     <motion.div whileHover={{ scale: 1.05 }}><Box boxShadow='dark-lg'
       mx="auto"
       px={8}
-      py={4}
+      py={5}
       rounded="lg"
       shadow="lg"
       bg={'whiteAlpha.900'}
       maxW={isDesktop ? "650px" : '300px'}
-      mb='50px'
-      mr='45px'
+      mb='55px'
+      mr={isDesktop? '50px' : '28px'}
     >
 
       <Modal closeOnOverlayClick={false} isOpen={isFirstOpen} onClose={onFirstClose} size={isDesktop?'4xl':'full'}>
@@ -83,7 +82,7 @@ const IsolatedModal = ({ cards }) => {
         </chakra.p>
 
       </Box>
-      <Flex w='100%' justifyContent={'flex-end'}><IconButton borderBottom={'2px solid #fab717'} _focus={{ borderBottom: '2px solid #fab717' }} justifyContent={'center'} w={isDesktop ? "20%" : '50%'} onClick={onFirstOpen}><Text>Read more</Text></IconButton></Flex>
+      <Flex w='100%' pt='7px' justifyContent={'flex-end'}><IconButton borderBottom={'2px solid #fab717'} _focus={{ borderBottom: '2px solid #fab717' }} justifyContent={'center'} w={isDesktop ? "20%" : '50%'} onClick={onFirstOpen}><Text>Read more</Text></IconButton></Flex>
     </Box> </motion.div>
   )
 
