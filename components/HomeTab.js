@@ -35,7 +35,7 @@ export default function CaptionCarousel() {
     // buttons as the screen size changes
     const top = useBreakpointValue({ base: '90%', md: '50%' });
     const side = useBreakpointValue({ base: '30%', md: '40px' });
-    const isDesktop = useMediaQuery('(min-width: 960px)');
+    const isDesktop = useMediaQuery('(min-width: 1000px)');
 
     
   
@@ -126,13 +126,13 @@ export default function CaptionCarousel() {
               >
                 {/* This is the block you need to change, to customize the caption */}
                 <Flex size="0" height="600px" position="sticky" w='100%' p='60px'>
-                  <Flex padding='.5rem' borderRadius='8px' backgroundColor='rgba(0, 0, 0, 0.75)' h='380px' w={isDesktop ? '35%' : '100%'} position='absolute' right={isDesktop? '100' : '0'} top='140'>
+                  <Flex padding='.5rem' borderRadius='8px' backgroundColor='rgba(0, 0, 0, 0.75)' h={isDesktop?'350px':'230px'} w={isDesktop ? '35%' : '100%'} position='absolute' right={isDesktop? '100' : '0'} top='140'>
                     <Stack
                       spacing={6}
                       w={'full'}
                       maxW={'lg'}
                       position="absolute"
-                      alignItems={isDesktop?'flex-end':'center'}
+                      alignItems={'center'}
                       top="50%"
                       p='-5px'
                       transform="translate(0, -50%)">
